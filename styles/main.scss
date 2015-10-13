@@ -1,4 +1,4 @@
-@charset "utf-8";
+@charset "UTF-8";
 
 // fonts
 @import "fonts/fonts";
@@ -7,6 +7,7 @@
 @import "variables/variables";
 
 // utils
+@import "bourbon/bourbon";
 @import "utils/mixins";
 @import "utils/utils";
 
