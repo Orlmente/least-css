@@ -61,3 +61,5 @@ tmtags
 # Project specific ignores
 ############################
 _assets
+
+!pages
