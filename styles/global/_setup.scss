@@ -11,3 +11,89 @@ html {
 *:after {
     box-sizing: inherit;
 }
+
+body {
+    font-family: $sans;
+    font-size: $base-font-size;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4 {
+    font-family: $serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 auto $pad-module;
+    font-weight: bold;
+    line-height: normal;
+}
+h1 {
+    font-size: $base-font-size*2.5;
+}
+h2 {
+    font-size: $base-font-size*2;
+}
+h3 {
+    font-size: $base-font-size*1.8;
+}
+h4 {
+    font-size: $base-font-size*1.5;
+}
+h5 {
+    font-size: $base-font-size;
+}
+h6 {
+    font-size: $base-font-size*0.9;
+}
+
+// Lists
+ol {
+    list-style: inside decimal;
+
+}
+ul {
+    list-style: inside disc;
+}
+ol,
+ul {
+    margin: $pad-module auto;
+}
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-left: $pad-module*3;
+    font-size: 90%;
+}
+ol ol,
+ul ol {
+    list-style-type: upper-roman;
+}
+ol ul,
+ul ul {
+    list-style-type: square;
+}
+li {
+    margin: 0 auto $pad-module;
+}
+
+// Links
+a,
+button {
+    color: inherit;
+}
+
+// Images
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Setup - @end */
