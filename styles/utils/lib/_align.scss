@@ -1,0 +1,35 @@
+//////////////////////////////////////
+// 
+// Content alignment via
+// translate/translateX/translateY
+// 
+// Params:
+// 
+//  $position (default: relative)
+//    use 'absolute' when contents'
+//    height is unknown for vertical
+//    center to behave as expected
+// 
+//////////////////////////////////////
+
+// horizontal centering
+@mixin horizontal-center ( $position: relative ) {
+    position: $position;
+    left: 50%;
+    @include transform ( translateX(-50%) );
+}
+
+// vertical centering
+@mixin vertical-center ( $position: relative ) {
+    position: $position;
+    top: 50%;
+    @include transform( translateY(-50%) );
+}
+
+// total centering
+@mixin total-center ( $position: relative ) {
+    position: $position;
+    left: 50%;
+    top: 50%;
+    @include transform( translateX(-50%) translateY(-50%) );
+}

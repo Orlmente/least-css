@@ -1,0 +1,7 @@
+// box sizing
+@mixin box-sizing($sizing:border-box) {
+    -webkit-box-sizing: $sizing;
+       -moz-box-sizing: $sizing;
+        -ms-box-sizing: $sizing;
+            box-sizing: $sizing;
+}

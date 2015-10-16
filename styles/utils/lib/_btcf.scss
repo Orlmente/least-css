@@ -1,0 +1,9 @@
+// Beat That ClearFix!
+// (http://cssmojo.com/latest_new_clearfix_so_far/)
+@mixin btcf() {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
