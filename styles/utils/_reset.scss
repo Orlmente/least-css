@@ -22,6 +22,15 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+// 
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+}
+
 // normalize.css
 // (their version addresses more tags)
 article,
