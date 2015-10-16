@@ -9,9 +9,6 @@ $real-black       : #000;
 $overlay-bg       : rgba(0,0,0,0.75);
 $overlay-bg-light : rgba(255,255,255,0.65);
 
-// sizes
-$pad-module : 10px;
-
 // fonts
 $sans  : $helvetica;
 $serif : $georgia;
@@ -23,5 +20,10 @@ $icon  : 'FontAwesome';
 // html has font-size: 62.5% so 1rem = 10px
 $base-font-size   : 1.4rem;
 $mobile-font-size : 1.6rem;
+
+// sizes
+$pad-module  : 10px;
+$icon-height : $base-font-size;
+$icon-width  : $base-font-size;
 
 // images / icons
