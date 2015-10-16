@@ -117,22 +117,19 @@ dfn[title] {
     cursor: help;
 }
 
-// normalize.css
-// (could useless if you ignore some browser set them to 'bolder'...)
+// normalize.css + html5doctor merging for bold and italic
 b,
+mark,
 strong {
     font-weight: bold;
 }
 
-// normalize.css
-dfn {
-    font-style: italic;
-}
-
-// html5doctor
+// normalize.css + html5doctor merging for bold and italic
+i,
+em,
+dfn,
 mark {
-    font-style:italic;
-    font-weight:bold;
+    font-style: italic;
 }
 
 // html5doctor
