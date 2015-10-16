@@ -1,0 +1,62 @@
+/* ClearFix - @begin */
+.cf {
+    @include btcf;
+}
+/* ClearFix - @end */
+
+/* Floats - @begin */
+.to-left {
+    @include to-left;
+}
+.to-right {
+    @include to-right;
+}
+/* Floats - @end */
+
+/* Centering - @begin */
+.center {
+    @include horizontal-center;
+}
+.middle {
+    @include vertical-center;
+}
+.centered {
+    @include total-center;
+}
+.absolute-center {
+    @include horizontal-center(absolute);
+}
+.absolute-middle {
+    @include vertical-center(absolute);
+}
+.absolute-centered {
+    @include total-center(absolute);
+}
+/* Centering - @end */
+
+/* Sizing - @begin */
+.full {
+    width: 100%;
+}
+.half {
+    width: 50%;
+}
+.one-third {
+    width: 33.33%;
+    &:first-child {
+        width: 33.34%;
+    }
+}
+.two-third {
+    width: 66%;
+}
+.one-fourth {
+    width: 25%;
+}
+.three-fourth {
+    width: 75%;
+}
+.one-fifth {
+    width: 20%;
+}
+/* Sizing - @end */
