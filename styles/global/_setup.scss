@@ -101,13 +101,36 @@ img {
 
 /* TESTING STUF -- TO BE REMOVED */
 
+.font-sans {
+    font-family: $sans;
+}
+.font-serif {
+    font-family: $serif;
+}
+.font-mono {
+    font-family: $mono;
+}
 .font-icon {
     font-family: $icon;
-    
 }
-.icon-star {
+
+.icon {
+    position: relative;
+    display: inline-block;
+    height: $icon-height;
+    width: $icon-width;
+    overflow: hidden;
+
     &:before {
-        content: "\f005";
+        content: "";
         display: inline-block;
+        text-align: center;
     }
+}
+.icon-label {
+    display: inherit;
+    @include hide-text;
+}
+.icon-star:before {
+    content: "\f005";
 }
