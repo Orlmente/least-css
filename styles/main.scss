@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+// reset
+@import "global/reset";
+
 // bourbon
 @import "bourbon/bourbon";
 
@@ -8,9 +11,6 @@
 
 // variables
 @import "variables/variables";
-
-// reset
-@import "global/reset";
 
 // utils
 @import "utils/mixins";
