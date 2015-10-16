@@ -1,0 +1,356 @@
+/*! http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) |&&| normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css |&&| html5doctor.com Reset Stylesheet v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark - http://richclarkdesign.com | Twitter: @rich_clark *** Merged and trimmed to keep the best from both by Daniele O'rlmente?! Messa */
+/* line 4, ../styles/global/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 27, ../styles/global/_reset.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* line 44, ../styles/global/_reset.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+/* line 50, ../styles/global/_reset.scss */
+progress {
+  vertical-align: baseline;
+}
+
+/* line 55, ../styles/global/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 61, ../styles/global/_reset.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* line 67, ../styles/global/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 72, ../styles/global/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 77, ../styles/global/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 80, ../styles/global/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 87, ../styles/global/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 93, ../styles/global/_reset.scss */
+a {
+  background-color: transparent;
+}
+
+/* line 98, ../styles/global/_reset.scss */
+a:focus,
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* line 105, ../styles/global/_reset.scss */
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+/* line 113, ../styles/global/_reset.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/* line 119, ../styles/global/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 124, ../styles/global/_reset.scss */
+mark {
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* line 130, ../styles/global/_reset.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 135, ../styles/global/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 140, ../styles/global/_reset.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 147, ../styles/global/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 150, ../styles/global/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 156, ../styles/global/_reset.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 161, ../styles/global/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 166, ../styles/global/_reset.scss */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/* line 176, ../styles/global/_reset.scss */
+pre {
+  overflow: auto;
+}
+
+/* line 182, ../styles/global/_reset.scss */
+code,
+kbd,
+pre,
+samp {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* line 194, ../styles/global/_reset.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* line 200, ../styles/global/_reset.scss */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/* line 206, ../styles/global/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+/* line 211, ../styles/global/_reset.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 217, ../styles/global/_reset.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* ClearFix - @begin */
+/* line 4, ../styles/utils/lib/_btcf.scss */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* ClearFix - @end */
+/* Floats - @begin */
+/* line 8, ../styles/utils/_utils.scss */
+.to-left {
+  float: left;
+}
+
+/* line 11, ../styles/utils/_utils.scss */
+.to-right {
+  float: right;
+}
+
+/* Floats - @end */
+/* Centering - @begin */
+/* line 17, ../styles/utils/_utils.scss */
+.center {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 20, ../styles/utils/_utils.scss */
+.middle {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 23, ../styles/utils/_utils.scss */
+.centered {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* line 26, ../styles/utils/_utils.scss */
+.absolute-center {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 29, ../styles/utils/_utils.scss */
+.absolute-middle {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 32, ../styles/utils/_utils.scss */
+.absolute-centered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+/* Centering - @end */
+/* Sizing - @begin */
+/* line 38, ../styles/utils/_utils.scss */
+.full {
+  width: 100%;
+}
+
+/* line 41, ../styles/utils/_utils.scss */
+.half {
+  width: 50%;
+}
+
+/* line 44, ../styles/utils/_utils.scss */
+.one-third {
+  width: 33.33%;
+}
+/* line 46, ../styles/utils/_utils.scss */
+.one-third:first-child {
+  width: 33.34%;
+}
+
+/* line 50, ../styles/utils/_utils.scss */
+.two-third {
+  width: 66%;
+}
+
+/* line 53, ../styles/utils/_utils.scss */
+.one-fourth {
+  width: 25%;
+}
+
+/* line 56, ../styles/utils/_utils.scss */
+.three-fourth {
+  width: 75%;
+}
+
+/* line 59, ../styles/utils/_utils.scss */
+.one-fifth {
+  width: 20%;
+}
+
+/* Sizing - @end */
