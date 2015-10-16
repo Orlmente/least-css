@@ -1,0 +1,221 @@
+/*! http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) |&&| normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css |&&| html5doctor.com Reset Stylesheet v1.6.1 | Last Updated: 2010-09-17 | Author: Richard Clark - http://richclarkdesign.com | Twitter: @rich_clark *** Merged and trimmed to keep the best from both by Daniele O'rlmente?! Messa */
+
+// meyer's reset
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+// normalize.css
+// (their version addresses more tags)
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+// 
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+}
+progress {
+    vertical-align: baseline;
+}
+
+// normalize.css
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+// normalize.css
+[hidden],
+template {
+    display: none;
+}
+
+// meyer's reset
+body {
+    line-height: 1;
+}
+
+// meyer's reset
+ol, ul {
+    list-style: none;
+}
+
+// meyer's reset
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+// meyer's reset
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+// normalize.css
+a {
+    background-color: transparent;
+}
+
+// 
+a:focus,
+a:active,
+a:hover {
+    outline: 0;
+}
+
+// html5doctor
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+// normalize.css
+// (could useless if you ignore some browser set them to 'bolder'...)
+b,
+strong {
+    font-weight: bold;
+}
+
+// normalize.css
+dfn {
+    font-style: italic;
+}
+
+// html5doctor
+mark {
+    font-style:italic;
+    font-weight:bold;
+}
+
+// html5doctor
+del {
+    text-decoration: line-through;
+}
+
+// html5doctor & normalize.css
+small {
+    font-size: 80%;
+}
+
+// normalize.css
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+// 
+// (added ms-interpolation)
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+// normalize.css
+svg:not(:root) {
+    overflow: hidden;
+}
+
+// html5doctor
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+// normalize.css
+pre {
+    overflow: auto;
+}
+
+// normalize.css
+// (added white-space & word-wrap)
+code,
+kbd,
+pre,
+samp {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+// normalize.css
+optgroup {
+    font-weight: bold;
+}
+
+
+// 
+button[disabled],
+input[disabled] {
+    cursor:default;
+}
+
+// 
+input[type="search"] {
+    -webkit-appearance:textfield;
+}
+
+// 
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance:none;
+}
+
+// 
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
