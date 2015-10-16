@@ -3,8 +3,11 @@
 // reset
 @import "global/reset";
 
-// bourbon
+/*! {{PROJECT_NAME}} v{{MAJOR}}.{{MINOR}}.{{PATCH}} | {{DATE}} License: {{LICENSE}} | by {{AUTHOR}} */
+
+// bourbon & mixins
 @import "bourbon/bourbon";
+@import "utils/mixins";
 
 // fonts
 @import "fonts/fonts";
@@ -12,16 +15,15 @@
 // variables
 @import "variables/variables";
 
-// utils
-@import "utils/mixins";
-@import "utils/utils";
-
 // globals
 @import "global/setup";
 
 // pages
 
 // partials
+
+// utils
+@import "utils/utils";
 
 // mediaqueries
 @import "mediaqueries/mediaqueries";
