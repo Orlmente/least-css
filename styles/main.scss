@@ -9,12 +9,14 @@
 // variables
 @import "variables/variables";
 
+// reset
+@import "global/reset";
+
 // utils
 @import "utils/mixins";
 @import "utils/utils";
 
 // globals
-@import "global/reset";
 @import "global/setup";
 
 // pages
