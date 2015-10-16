@@ -1,17 +1,26 @@
 // variables
 
 // colors
-$white       : #fff;
-$optic-white : #fafafa;
-$black       : #1e1e1e;
-$real-black  : #000;
+$white            : #fff;
+$optic-white      : #fafafa;
+$black            : #1e1e1e;
+$real-black       : #000;
+
+$overlay-bg       : rgba(0,0,0,0.75);
+$overlay-bg-light : rgba(255,255,255,0.65);
 
 // sizes
-$pad-module  : 10px;
+$pad-module : 10px;
 
 // fonts
-$sans        : $helvetica;
-$serif       : $georgia;
-$mono        : $monospace;
+$sans  : $helvetica;
+$serif : $georgia;
+$mono  : $monospace;
+
+// font sizes
+// NOTE:
+// html has font-size: 62.5% so 1rem = 10px
+$base-font-size   : 1.4rem;
+$mobile-font-size : 1.6rem;
 
 // images / icons
