@@ -1,0 +1,6 @@
+// USE bourbon's hide-text() instead!
+@mixin text-hide( $direction: ltr, $indent: -6666em ) {
+    direction: $direction;
+    text-indent: $indent;
+    overflow: hidden;
+}
