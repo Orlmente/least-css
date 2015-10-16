@@ -222,6 +222,19 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+/*! {{PROJECT_NAME}} v{{MAJOR}}.{{MINOR}}.{{PATCH}} | {{DATE}} License: {{LICENSE}} | by {{AUTHOR}} */
+/* line 1, ../styles/global/_setup.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 5, ../styles/global/_setup.scss */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /* ClearFix - @begin */
 /* line 4, ../styles/utils/lib/_btcf.scss */
 .cf:after {
