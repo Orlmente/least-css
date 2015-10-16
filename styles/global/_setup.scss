@@ -97,3 +97,17 @@ img {
 }
 
 /* Setup - @end */
+
+
+/* TESTING STUF -- TO BE REMOVED */
+
+.font-icon {
+    font-family: $icon;
+    
+}
+.icon-star {
+    &:before {
+        content: "\f005";
+        display: inline-block;
+    }
+}
