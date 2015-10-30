@@ -1,0 +1,37 @@
+/* Typography - @begin */
+
+.font-sans {
+    font-family: $sans;
+}
+.font-serif {
+    font-family: $serif;
+}
+.font-mono {
+    font-family: $mono;
+}
+.font-icon {
+    font-family: $icon;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    height: $icon-height;
+    width: $icon-width;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        text-align: center;
+    }
+}
+.icon-label {
+    display: inherit;
+    @include hide-text;
+}
+.icon-star:before {
+    content: "\f005";
+}
+
+/* Typography - @end */
