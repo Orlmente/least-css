@@ -4,6 +4,9 @@
 Use sass/scss/less nesting wisely, don't abuse it!  
 Nesting should be used only for modifiers or pseudos (elements/classes).  
 2 levels deep nesting should be the max nesting depth, 3rd level is acceptable only for pseudos  
+
+_The Less Specific A Selector Is, The Better And Faster It Is!_  
+
 _The more you nest, the more you'll have to override and use !important, so please don't... just DON'T_ (see 1.a for another reason to avoid deep nesting)  
 
 ######Do:
@@ -41,10 +44,13 @@ _The more you nest, the more you'll have to override and use !important, so plea
 
 Browsers parse styles in a counter intuitive way, when you write something like "#foo .bar .baz a" you may think it looks for "#foo" element, then select all ".baz" under ".bar" and in this shortened list of elements search for "a" tags, well, _IT DOES NOT_.  
 Browsers will pick _EVERY_ "a" tag in the document, _THEN_ look for any occurrence under ".baz" class, within the list of every "a" under ".baz" class search for the occurrences that has ".bar" as parents and lastly they will sort out which ones are found under "#foo" element.
-The way browsers handle selectors make a too specific one harder (and more expensive) to be parsed, so the rightmost selector _MUST_ always have the higher specificity in the chain  
+The way browsers handle selectors make a too specific one harder (and more expensive) to be parsed, so (while keeping an eye to the "less specific, the better..." rule) the rightmost selector _MUST_ always have the higher specificity in the chain  
 
-_The Less Specific A Selector Is, The Better And Faster It Is!_
+### 1.b Of Selector Optimization
+to be written
 
+### 1.c Of Reflow And 
+to be written
 
 ## 2 DON'T USE IDs AS SELECTOR
 to be written
