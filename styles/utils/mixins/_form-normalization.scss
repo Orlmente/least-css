@@ -1,0 +1,100 @@
+// remove unwanted "features" from form's elements
+@mixin clear-form-features ($importance: '') {
+    @include no-appearance(unquote($importance));
+    @include no-box-shadow(unquote($importance));
+    @include no-radius(unquote($importance));
+    @include no-expand(unquote($importance));
+    @include no-autofill(unquote($importance));
+
+
+    &:focus {
+        @include no-outline($importance);
+    }
+}
+
+@mixin no-appearance ($importance) {
+    -webkit-appearance: none unquote($importance);
+       -moz-appearance: none unquote($importance);
+            appearance: none unquote($importance);
+}
+
+@mixin no-box-shadow ($importance) {
+    box-shadow: none unquote($importance);
+}
+
+@mixin no-radius ($importance) {
+    border-radius: 0 unquote($importance);
+}
+
+@mixin no-outline ($importance) {
+    outline: 0 none unquote($importance);
+}
+
+@mixin no-autofill($importance) {
+    &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px white inset unquote($importance);
+    }
+}
+
+@mixin no-expand($importance: '') {
+    &::-ms-expand {
+        display: none unquote($importance);
+    }
+}
+
+@mixin no-clear($importance: '') {
+    &::-ms-clear {
+        display: none unquote($importance);
+    }
+}
+
+@mixin file-upload($importance: '') {
+    &::-webkit-file-upload-button {}
+    &::-ms-browse {}
+    &::-ms-value {}
+}
+
+@mixin normalize-form( $importance: '' ) {
+    button,
+    select,
+    textarea,
+    input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
+        @include clear-form-features( $importance );
+        border: 1px solid unquote($importance);
+        margin: 0 unquote($importance);
+        padding: 0 unquote($importance);
+    }
+    textarea {
+        resize: none unquote($importance);
+    }
+    input[type="radio"] {}
+    input[type="checkbox"] {}
+    input[type="file"] {
+        @include file-upload();
+    }
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"],
+    button {
+        &::-moz-focus-inner {
+            border: 0 unquote($importance);
+            padding: 0 unquote($importance);
+        }
+    }
+}
+
+// input[type="search"] {
+//     -webkit-appearance:textfield;
+// }
+
+// // 
+// input[type="search"]::-webkit-search-cancel-button,
+// input[type="search"]::-webkit-search-decoration {
+//     -webkit-appearance:none;
+// }
+// 
+// button::-moz-focus-inner,
+// input::-moz-focus-inner {
+//     border: 0;
+//     padding: 0;
+// }
