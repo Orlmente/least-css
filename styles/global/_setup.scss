@@ -1,6 +1,8 @@
 /* Setup - @begin */
 html {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 
     // 1rem === 10px 
     font-size: 62.5%;
@@ -101,36 +103,14 @@ img {
 
 /* TESTING STUF -- TO BE REMOVED */
 
-.font-sans {
-    font-family: $sans;
-}
-.font-serif {
-    font-family: $serif;
-}
-.font-mono {
-    font-family: $mono;
-}
-.font-icon {
-    font-family: $icon;
-}
 
-.icon {
-    position: relative;
-    display: inline-block;
-    height: $icon-height;
-    width: $icon-width;
-    overflow: hidden;
-
-    &:before {
-        content: "";
-        display: inline-block;
-        text-align: center;
+@include normalize-form();
+.form {
+    button,
+    select,
+    textarea,
+    input:not([type="radio"]):not([type="checkbox"]) {
     }
-}
-.icon-label {
-    display: inherit;
-    @include hide-text;
-}
-.icon-star:before {
-    content: "\f005";
+    input[type="file"] {
+    }
 }
