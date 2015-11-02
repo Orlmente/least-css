@@ -62,6 +62,8 @@ There are many factors that can affect browsers' performances when writing css, 
 *   Duplicate properties
 *   Unused/Orphanized code
 *   Frameworks bloat
+
+_...may be expanded..._
 <!-- SEE IF SOMETHING IS MISSING IN THIS LIST -->
 
 ### 3.a) Of Browser And Styles Parsing, or, How Things Works In Real Life
@@ -69,6 +71,8 @@ There are many factors that can affect browsers' performances when writing css, 
 Browsers parse styles in a counter intuitive way, when you write something like "#foo .bar .baz a" you may think it looks for "#foo" element, then select all ".baz" under ".bar" and in this shortened list of elements search for "a" tags, well, _IT DOES NOT_.  
 Browsers will pick _EVERY_ "a" tag in the document, _THEN_ look for any occurrence under ".baz" class, within the list of every "a" under ".baz" class search for the occurrences that has ".bar" as parents and lastly they will sort out which ones are found under "#foo" element.
 The way browsers handle selectors make a too specific one harder (and more expensive) to be parsed, so (while keeping an eye to the "less specific, the better..." rule) the rightmost selector _SHOULD_ always have the higher specificity in the chain  
+
+_...may be expanded..._
 <!-- PROOFREAD AND LOOK FOR MISSING THINGS -->
 
 ### 3.b) Of Selector Optimization, or, Even If ID Is The Fastest Selectors You Still Should Avoid Them
@@ -97,16 +101,20 @@ Common use for IDs is the following:
 
 This is a very unoptimized selector, not for the slower right part but for the useless # on the left. Browser rtl parsing scheme first will select _ALL_ the elements in the DOM and only then will look for the ones inside #foo.  
 If you really want to use IDs, then just use them alone. But still I don't really see what couldn't be achieved without them.
+
+_...may be expanded..._
 <!-- PROOFREAD AND LOOK FOR MISSING THINGS -->
 
 ######Enters Ben Frain: “sweating over the selectors used in modern browsers is futile.”
 _(you may have read it in some blogs or discussions)_  
 
+_...to be expanded..._
 <!-- EXPAND FRAIN'S THOUGHTS -->  
 <!-- MENTION "LOBOTOMIZED OWL SELECTOR (* + *)" -->
 
 ### 3.c) Of Reflow And Repaint, or, Don't Waste Machine Resources
 
+_...to be expanded..._
 <!-- SOMETHING ABOUT REFLOW AND REPAINT -->  
 <!-- WRITE ABOUT WHAT TRIGGER PAGE REFLOW AND WHAT TRIGGER PAGE REPAINT -->
 
@@ -119,7 +127,10 @@ _(you may have read it in some blogs or discussions)_
 3. Dont't overqualify selectors
 4. Rightmost selector in a chain should always be the more specific one
 5. Embrace KISS and DRY principles
-6. ...<!-- FINISH WITH MISSING POINTS -->
+6. ...
+
+_...to be expanded..._
+<!-- FINISH WITH MISSING POINTS -->
 
 
 ## 4 DON'T MIX UNITS IN SAME PROPERTY
@@ -145,6 +156,8 @@ _Mixing different units in different properties is fine though, like em for font
         font-size: 1.2em;
         // different units for different props
     }
+
+_...may be moved inside #3 subsections..._
 <!-- THIS WHOLE SECTION COULD BE SPLITTED AND MOVED IN #3 SUBSECTIONS, THINK ABOUT IT -->
 
 ## 5 GENERAL HINTS
@@ -206,11 +219,14 @@ _Mixing different units in different properties is fine though, like em for font
         padding: 5px 10px;
     }
 
+_...may be moved inside #3 subsections..._
 <!-- THIS WHOLE SECTION COULD BE SPLITTED AND MOVED IN #3 SUBSECTIONS, THINK ABOUT IT -->
 
 ## 6 COMPILING CMD LINE DIRECTIVES
 
-SASS and LESS give you some intresting options and switches <!-- FINISH SENTENCE, TALK ABOUT PROS/CONS OF BOTH LESS AND SASS/SCSS -->
+SASS and LESS give you some intresting options and switches...
+_...to be expanded..._
+<!-- FINISH SENTENCE, TALK ABOUT PROS/CONS OF BOTH LESS AND SASS/SCSS -->
 
 ######cmd line for dev:
 
@@ -241,3 +257,4 @@ Typical output of that cmd is:
 
     html{box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:62.5%}*,*:before,*:after{box-sizing:inherit}
 
+_...add citations, useful links, notes, etc..._
