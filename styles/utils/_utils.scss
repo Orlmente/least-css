@@ -60,3 +60,17 @@
     width: 20%;
 }
 /* Sizing - @end */
+
+/* Ratios - @begin */
+.ratio {
+    @include ratio;
+}
+@include ratios(1,1);
+@include ratios(2,1);
+@include ratios(3,2);
+@include ratios(4,3);
+@include ratios(16,9);
+@include ratios(16,10);
+@include ratios(1,2);
+
+/* Ratios - @end */
