@@ -1,0 +1,26 @@
+/* Ratios - @begin */
+@mixin ratio() {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+
+    &:before {
+        content: '';
+        display: block;
+    }
+}
+
+@mixin ratios($width:1,$height:1) {
+    .ratio-#{$width}-#{$height},
+    .ratio-#{$width}x#{$height}, {
+        @include ratio-set($width,$height);
+    }
+}
+
+@mixin ratio-set($width:1,$height:1, $importance: '') {
+    &:before {
+        padding-top: percentage($height / $width) unquote($importance);
+    }
+}
+/* Ratios - @end */
