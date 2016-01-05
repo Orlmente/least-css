@@ -352,7 +352,7 @@ Typical output of that cmd is:
     }
 
 ###### cmd line for production:
-    sass source:dest --style compressed
+    sass source:dest --sourcemap=none --style compressed
 
 Typical output of that cmd is:
 
