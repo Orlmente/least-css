@@ -358,6 +358,10 @@ Typical output of that cmd is:
 
     html{box-sizing:border-box;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:62.5%}*,*:before,*:after{box-sizing:inherit}
 
-_TODO: add citations, useful links, etc..._
-
 ---
+
+
+
+## 5) LEGALS
+
+Licensed under MIT & WTFP
