@@ -329,9 +329,6 @@ There are 3 type of comment markers:
 
 
 ## 4) COMPILING CMD LINE DIRECTIVES
-SASS and LESS give you some intresting options and switches...
-_...to be expanded..._
-<!-- FINISH SENTENCE, TALK ABOUT PROS/CONS OF BOTH LESS AND SASS/SCSS -->
 
 ###### cmd line for dev:
     sass --watch source:dest --line-numbers --sourcemap=none --style expanded
