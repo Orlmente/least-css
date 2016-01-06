@@ -122,18 +122,3 @@ img {
 }
 
 /* Setup - @end */
-
-
-/* TESTING STUF -- TO BE REMOVED */
-
-
-@include normalize-form();
-.form {
-    button,
-    select,
-    textarea,
-    input:not([type="radio"]):not([type="checkbox"]) {
-    }
-    input[type="file"] {
-    }
-}
