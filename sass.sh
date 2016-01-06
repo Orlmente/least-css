@@ -1,19 +1,59 @@
-#! /bin/bash
-if [ ! $# == 0 ]
-    then
-    if [ $1 == 'dev' ]
-        then
-        echo "compiling for developement"
-        sass $2 styles/main.scss:builds/assets/styles/style.css --line-numbers --sourcemap=none --style expanded $3
-        elif [ $1 == 'prod' ]
-        then
-        echo "compiling for production"
-        sass $2 styles/main.scss:builds/assets/styles/style.css $3
-        else
-        echo "compiling with given switches"
-        sass styles/main.scss:builds/assets/styles/style.css $1
-    fi
-    else
-    echo "Usage: sass.sh [env|watch-mode] [watch-mode] [other-switches]"
-    echo "to modify paths edit sass.sh"
+#!/bin/bash
+
+# input
+src="styles/"
+src+="main.scss"
+
+# output folders
+dest="builds/assets/styles/"
+# output filename
+dev=$dest"style.css"
+prod=$dest"style.min.css"
+custom=$dest"style.custom.css"
+
+# don't edit below this line
+if (( $# == 0 )); then
+    echo -e $usage
+    exit
+else
+    case $1 in
+        --h*|--\? )
+            echo -e $usage
+            exit
+            ;;
+        "dev" )
+            echo "compiling for developement"
+            sass $2 $src:$dev --line-numbers --sourcemap=none --style expanded ${@:3}
+            exit
+            ;;
+        "prod"|"min" )
+            echo "compiling for production"
+            sass $2 $src:$prod  --sourcemap=none --style compressed ${@:3}
+            exit
+            ;;
+        --w* )
+            echo "compiling with given switches in --watch mode"
+            sass $1 $src:$custom ${@:2}
+            exit
+            ;;
+        * )
+            echo "compiling with given switches"
+            sass $src:$custom ${@:1}
+            exit
+            ;;
+    esac
+    echo -e $usage
 fi
+
+usage="
+Usage:\n
+sass.sh [environment|watch-mode] [watch-mode|other-switches]\n\n
+Examples:\n
+1) watch mode with develop environment presets\n
+./sass.sh dev --watch\n
+---\n
+2) 1 time compiling for production\n
+./sass.sh prod\n
+---\n\n
+to modify input/output paths edit sass.sh\n
+"
