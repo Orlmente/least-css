@@ -6,7 +6,7 @@
 /*! {{PROJECT_NAME}} v{{MAJOR}}.{{MINOR}}.{{PATCH}} | {{DATE}} License: {{LICENSE}} | by {{AUTHOR}} */
 
 // bourbon & mixins
-@import "bourbon/bourbon";
+@import "_bourbon/bourbon";
 @import "utils/mixins";
 
 // fonts
