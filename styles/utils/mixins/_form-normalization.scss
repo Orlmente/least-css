@@ -58,11 +58,18 @@
     button,
     select,
     textarea,
-    input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
-        @include clear-form-features( $importance );
+    input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="color"]) {
         border: 1px solid unquote($importance);
         margin: 0 unquote($importance);
-        padding: 0 unquote($importance);
+        padding: 0.25em 0.5em unquote($importance);
+    }
+    button,
+    textarea,
+    input:not([type="radio"]):not([type="checkbox"]):not([type="file"]) {
+        @include clear-form-features( $importance );
+    }
+    select:focus {
+        @include no-outline( $importance );
     }
     textarea {
         resize: none unquote($importance);
@@ -78,7 +85,7 @@
     button {
         &::-moz-focus-inner {
             border: 0 unquote($importance);
-            padding: 0 unquote($importance);
+            padding: 0.25em 0.5em unquote($importance);
         }
     }
 }
