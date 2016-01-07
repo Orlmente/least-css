@@ -11,6 +11,13 @@ dev=$dest"style.css"
 prod=$dest"style.min.css"
 custom=$dest"style.custom.css"
 
+# check directories
+if [[ ! -e $dest ]]; then
+    mkdir -p $dest
+elif [[ ! -d $dest ]]; then
+    echo "$dest already exists but is not a directory." 1>&2
+fi
+
 # don't edit below this line
 if (( $# == 0 )); then
     echo -e $usage
