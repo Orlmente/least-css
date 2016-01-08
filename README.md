@@ -59,7 +59,7 @@ Nesting: this is not the feature you are looking for.
 
 
 ## 3) WRITE EFFICIENT STYLE!
-Writing light and efficient styles is not as simple as it can seems.
+Writing light and efficient styles is not as simple as it seems.
 There are many factors that can affect browsers' performances or project mantainability when writing css, for example:
 
 *   Misunderstanding of rendering engines, that leads to
