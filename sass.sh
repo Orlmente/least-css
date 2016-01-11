@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# input
+# input folder
 src="styles/"
+# input file
 src+="main.scss"
 
 # output folders
