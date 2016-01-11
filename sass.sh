@@ -11,6 +11,20 @@ dev=$dest"style.css"
 prod=$dest"style.min.css"
 custom=$dest"style.custom.css"
 
+#help message
+usage="
+Usage:\n
+sass.sh [environment|watch-mode] [watch-mode|other-switches]\n\n
+Examples:\n
+1) watch mode with develop environment presets\n
+./sass.sh dev --watch\n
+---\n
+2) 1 time compiling for production\n
+./sass.sh prod\n
+---\n\n
+to modify input/output paths edit sass.sh\n
+"
+
 # check directories
 if [[ ! -e $dest ]]; then
     mkdir -p $dest
@@ -51,16 +65,3 @@ else
     esac
     echo -e $usage
 fi
-
-usage="
-Usage:\n
-sass.sh [environment|watch-mode] [watch-mode|other-switches]\n\n
-Examples:\n
-1) watch mode with develop environment presets\n
-./sass.sh dev --watch\n
----\n
-2) 1 time compiling for production\n
-./sass.sh prod\n
----\n\n
-to modify input/output paths edit sass.sh\n
-"
