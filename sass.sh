@@ -26,7 +26,7 @@ Examples:\n
 to modify input/output paths edit sass.sh\n
 "
 
-# check directories
+# check for output directories
 if [[ ! -e $dest ]]; then
     mkdir -p $dest
 elif [[ ! -d $dest ]]; then
