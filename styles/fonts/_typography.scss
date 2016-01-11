@@ -31,8 +31,16 @@
     display: inherit;
     @include hide-text;
 }
-.icon-star:before {
-    content: "\f005";
+
+// put all icons in this list
+$icons: (
+    star: "\f005"
+);
+
+@each $name, $gliph in $icons {
+    .icon-#{$name}:before {
+        content: "#{$gliph}";
+    }
 }
 
 /* Typography - @end */
