@@ -85,7 +85,7 @@ them however you see fit.
 /* Phablet (mobile over 480vw) */
 @media (min-width: 481px) and (max-width: 767px) {
     .p-all {
-        @include-grid-col;
+        @include grid-col;
         width: 100%;
         // padding-right: 0;
     }
@@ -169,7 +169,6 @@ them however you see fit.
         @include grid-col;
         width: 80%;
     }
-
 } // end tablet
 
 /* Landscape to small desktop */
@@ -285,5 +284,4 @@ them however you see fit.
         @include grid-col;
         width: 8.33%;
     }
-
 } // end desktop styles
