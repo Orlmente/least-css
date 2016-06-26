@@ -74,3 +74,25 @@
 @include ratios(1,2);
 
 /* Ratios - @end */
+
+.debug {
+    border: 1px dashed red;
+    background-color: rgba( 0,0,0, .2 );
+    // padding: 0.2em;
+
+    .debug {
+        border-color: blue;
+
+        .debug {
+            border-color: green;
+
+            .debug {
+                border-color: orange;
+
+                .debug {
+                    border-color: pink;
+                }
+            }
+        }
+    }
+}
