@@ -17,8 +17,6 @@ $gutter: 1rem;
     .ie9 & {}
 }
 
-// Still to choose a proper name between
-// generic one (columns) or specific (columns-adjust)
 .columns {
     @include display(flex);
     @include flex-wrap(wrap);
@@ -29,6 +27,16 @@ $gutter: 1rem;
 
     &.columns-center {
         @include justify-content(center);
+    }
+
+    &.columns-middle {
+        @include flex-wrap(nowrap);
+        @include align-items(center);
+    }
+
+    &.columns-stretch {
+        @include flex-wrap(nowrap);
+        @include align-items(stretch);
     }
 
     & .columns {}

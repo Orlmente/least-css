@@ -48,7 +48,7 @@
     }
 }
 .two-third {
-    width: 66%;
+    width: 66.66%;
 }
 .one-fourth {
     width: 25%;
@@ -77,20 +77,24 @@
 
 .debug {
     border: 1px dashed red;
-    background-color: rgba( 0,0,0, .2 );
+    background-color: rgba( 0,0,0, 0.1 );
     // padding: 0.2em;
 
     .debug {
         border-color: blue;
+        background-color: rgba( 0,0,0, 0.1 );
 
         .debug {
             border-color: green;
+            background-color: rgba( 0,0,0, 0.1 );
 
             .debug {
                 border-color: orange;
+                background-color: rgba( 0,0,0, 0.1 );
 
                 .debug {
                     border-color: pink;
+                    background-color: rgba( 0,0,0, 0.1 );
                 }
             }
         }
