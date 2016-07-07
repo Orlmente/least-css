@@ -1,0 +1,55 @@
+/* Icons - @begin */
+
+.icon {
+    position: relative;
+    display: inline-block;
+    height: $icon-height;
+    width: $icon-width;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        display: inline-block;
+        text-align: center;
+        font-family: $icon;
+    }
+
+    &.icon-before {
+        width: auto;
+        padding-left: 1.2em;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &.icon-after {
+        width: auto;
+        padding-right: 1.2em;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: auto;
+            right: 0;
+        }
+    }
+}
+.icon-label {
+    display: inherit;
+    @include hide-text;
+}
+
+// put all icons in this list
+$icons: (
+    star: "\f005"
+);
+
+@each $name, $gliph in $icons {
+    .icon-#{$name}:before {
+        content: "#{$gliph}";
+    }
+}
+/* Icons - @end */

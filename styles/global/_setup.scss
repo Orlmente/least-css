@@ -21,23 +21,6 @@ body {
     font-size: $base-font-size;
 
     &:not(input) {
-        // limit the scope for these rules like I did for inputs
-        // if you notice something weird in text renderings
-
-        -ms-word-wrap: break-word;
-            word-wrap: break-word;
-           word-break: break-word; //non-standart css for webkit
-
-        // cleaning up the ragged lines and breaks
-        -webkit-hyphens: auto;
-           -moz-hyphens: auto;
-                hyphens: auto;
-
-        // sets a minimum number of characters before and after the break
-        -webkit-hyphenate-before: 2;
-         -webkit-hyphenate-after: 3;
-                 hyphenate-lines: 3;
-
         // enabling fancy ligatures when available
         -webkit-font-feature-settings: "liga", "dlig";
            -moz-font-feature-settings: "liga=1, dlig=1";
@@ -118,6 +101,28 @@ li {
 a,
 button {
     color: inherit;
+}
+
+// Texts hyphenation
+p,
+span,
+blockquote {
+    // limit the scope for these rules like I did for inputs
+    // if you notice something weird in text renderings
+
+    -ms-word-wrap: break-word;
+        word-wrap: break-word;
+       word-break: break-word; //non-standart css for webkit
+
+    // cleaning up the ragged lines and breaks
+    -webkit-hyphens: auto;
+       -moz-hyphens: auto;
+            hyphens: auto;
+
+    // sets a minimum number of characters before and after the break
+    -webkit-hyphenate-before: 2;
+     -webkit-hyphenate-after: 3;
+             hyphenate-lines: 3;
 }
 
 // Images

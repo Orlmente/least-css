@@ -1,5 +1,6 @@
 /* Typography - @begin */
 
+// Font faces
 .font-sans {
     font-family: $sans;
 }
@@ -13,34 +14,47 @@
     font-family: $icon;
 }
 
-.icon {
-    position: relative;
-    display: inline-block;
-    height: $icon-height;
-    width: $icon-width;
-    overflow: hidden;
+// Font modifiers
+.font-light {
+    font-weight: $light;
+}
+.font-normal {
+    font-weight: $roman;
+}
+.font-bold {
+    font-weight: $bold;
+}
 
-    &:before {
-        content: "";
-        display: inline-block;
-        text-align: center;
-        font-family: $icon;
+// Text modifiers
+// alignments
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+.text-justify {
+    text-align: justify;
+}
+// cases
+.text-lower {
+    text-transform: lowercase;
+}
+.text-upper {
+    text-transform: uppercase;
+}
+.text-capitalize {
+    text-transform: capitalize;
+}
+.text-ucfirst {
+    text-transform: lowercase;
+    &::first-letter {
+        text-transform: uppercase;
     }
 }
-.icon-label {
-    display: inherit;
-    @include hide-text;
-}
 
-// put all icons in this list
-$icons: (
-    star: "\f005"
-);
-
-@each $name, $gliph in $icons {
-    .icon-#{$name}:before {
-        content: "#{$gliph}";
-    }
-}
 
 /* Typography - @end */

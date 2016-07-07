@@ -1,30 +1,48 @@
-/******************************************************************
-Site Name:
-Author:
+/* Grid System - @begin */
 
-Stylesheet:
-
-forked from Bones' grid system
-
-******************************************************************/
 $gutter: 1rem;
 
 // using a mixin since we can't use placeholder selectors
-@mixin grid-col($right-pad: $gutter) {
-    float: left;
-    padding-right: $right-pad;
+@mixin grid-col($padding: $gutter) {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: $padding;
+    padding-right: $padding;
 
+    @include flex-basis(auto);
+    @include flex-grow(0);
+    @include flex-shrink(0);
+
+    // ie9 alternative
+    .ie9 & {}
 }
 
-// Still to choose a proper name between
-// generic one (columns) or specific (columns-adjust)
-.columns-adjust,
 .columns {
-    margin-right: -1*$gutter !important;
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+    @include align-content(flex-start);
 
-    & .columns {
-        margin-right: 0 !important;
+    &.columns-center {
+        @include justify-content(center);
     }
+
+    &.columns-middle {
+        @include flex-wrap(nowrap);
+        @include align-items(center);
+    }
+
+    &.columns-stretch {
+        @include flex-wrap(nowrap);
+        @include align-items(stretch);
+    }
+
+    & .columns {}
+
+    // ie9 alternative
+    .ie9 & {}
 }
 
 .column {
@@ -36,252 +54,95 @@ $gutter: 1rem;
 
 // the last column
 .last-col {
-    float: right;
-    padding-right: 0 !important;
+    margin-left: auto !important;
+
+    // ie9 alternative
+    .ie9 & {}
 }
 
 
-/*
-Mobile Grid Styles
-These are the widths for the mobile grid.
-There are four types, but you can add or customize
-them however you see fit.
-*/
-// @media (max-width: 767px) {
+// columns
+$cols-1-4: 1 1, 2 1, 3 1, 3 2, 4 1, 4 3;
+$cols-5: 5 1, 5 2, 5 3, 5 4;
+$cols-6: 6 1, 6 5;
+$cols-7: 7 1, 7 2, 7 3, 7 4, 7 5, 7 6;
+$cols-8: 8 1, 8 3, 8 5, 8 7;
+$cols-9-11: 9 1, 9 5, 9 4, 10 1, 11 1;
+$cols-12: 12 1, 12 5, 12 7, 12 10, 12 11;
+$cols-14: 14 1, 14 3, 14 5, 14 9, 14 11, 14 13;
+$cols-16: 16 1, 16 3, 16 5, 16 7, 16 9, 16 10, 16 11, 16 13, 16 15;
 
-.m-all {
-    @include grid-col;
-    width: 100%;
-    // padding-right: 0;
+// mobile
+$cols-m: join($cols-1-4, $cols-5);
+$cols-m: join($cols-m, $cols-6);
+
+// phablet
+$cols-p: join($cols-1-4, $cols-5);
+$cols-p: join($cols-p, $cols-6);
+$cols-p: join($cols-p, $cols-7);
+$cols-p: join($cols-p, $cols-8);
+
+// tablet
+$cols-t: join($cols-1-4, $cols-5);
+$cols-t: join($cols-t, $cols-5);
+$cols-t: join($cols-t, $cols-6);
+$cols-t: join($cols-t, $cols-7);
+$cols-t: join($cols-t, $cols-8);
+$cols-t: join($cols-t, $cols-9-11);
+$cols-t: join($cols-t, $cols-12);
+
+// desktop
+$cols-d: join($cols-1-4, $cols-5);
+$cols-d: join($cols-d, $cols-6);
+$cols-d: join($cols-d, $cols-7);
+$cols-d: join($cols-d, $cols-8);
+$cols-d: join($cols-d, $cols-9-11);
+$cols-d: join($cols-d, $cols-12);
+// $cols-d: join($cols-d, $cols-14);
+// $cols-d: join($cols-d, $cols-16);
+
+// grids
+$grids: (
+    'm': 'all' (
+        $cols-m
+    ),
+    'p': '(min-width: 415px) and (max-width: 767px)' (
+        $cols-p
+    ),
+    't': '(min-width: 768px) and (max-width: 1024px)' (
+        $cols-t
+    ),
+    'd': '(min-width: 1041px)' (
+        $cols-d
+    )
+);
+
+@each $name, $columns in $grids {
+    $media: nth( $columns, 1 );
+    $sizes: nth( $columns, 2 );
+    @if ( $media != '' ) {
+        @media #{unquote( $media )} {
+            @each $cell in $sizes {
+                $total: nth( $cell, 1 );
+                $partial: nth( $cell, 2 );
+                $desc: #{$partial}of#{$total};
+                @if ( $partial == $total ) {
+                    $desc: 'all';
+                }
+                .#{$name}-#{$desc} {
+                    // @include grid-col;
+                    width: percentage($partial / $total);
+                }
+                .#{$name}-push-#{$partial}of#{$total}.#{$name}-push-#{$partial}of#{$total} {
+                    margin-left: percentage($partial / $total);
+                }
+                .#{$name}-pull-#{$partial}of#{$total}.#{$name}-pull-#{$partial}of#{$total} {
+                    margin-left: auto;
+                    margin-right: percentage($partial / $total);
+                }
+            }
+        }
+    }
 }
 
-.m-1of2 {
-    @include grid-col;
-    width: 50%;
-}
-
-.m-1of3 {
-    @include grid-col;
-    width: 33.33%;
-}
-
-.m-2of3 {
-    @include grid-col;
-    width: 66.66%;
-}
-
-.m-1of4 {
-    @include grid-col;
-    width: 25%;
-}
-
-.m-3of4 {
-    @include grid-col;
-    width: 75%;
-}
-
-// } // end mobile styles
-
-/* Phablet (mobile over 480vw) */
-@media (min-width: 481px) and (max-width: 767px) {
-    .p-all {
-        @include grid-col;
-        width: 100%;
-        // padding-right: 0;
-    }
-
-    .p-1of2 {
-        @include grid-col;
-        width: 50%;
-    }
-
-    .p-1of3 {
-        @include grid-col;
-        width: 33.33%;
-    }
-
-    .p-2of3 {
-        @include grid-col;
-        width: 66.66%;
-    }
-
-    .p-1of4 {
-        @include grid-col;
-        width: 25%;
-    }
-
-    .p-3of4 {
-        @include grid-col;
-        width: 75%;
-    }
-}
-
-/* Portrait tablet to landscape */
-@media (min-width: 768px) and (max-width: 1029px) {
-
-    .t-all {
-        @include grid-col;
-        width: 100%;
-        // padding-right: 0;
-    }
-
-    .t-1of2 {
-        @include grid-col;
-        width: 50%;
-    }
-
-    .t-1of3 {
-        @include grid-col;
-        width: 33.33%;
-    }
-
-    .t-2of3 {
-        @include grid-col;
-        width: 66.66%;
-    }
-
-    .t-1of4 {
-        @include grid-col;
-        width: 25%;
-    }
-
-    .t-3of4 {
-        @include grid-col;
-        width: 75%;
-    }
-
-    .t-1of5 {
-        @include grid-col;
-        width: 20%;
-    }
-
-    .t-2of5 {
-        @include grid-col;
-        width: 40%;
-    }
-
-    .t-3of5 {
-        @include grid-col;
-        width: 60%;
-    }
-
-    .t-4of5 {
-        @include grid-col;
-        width: 80%;
-    }
-} // end tablet
-
-/* Landscape to small desktop */
-@media (min-width: 1030px) {
-
-    .d-all  {
-        @include grid-col;
-        width: 100%;
-        // padding-right: 0;
-    }
-
-    .d-1of2 {
-        @include grid-col;
-        width: 50%;
-    }
-
-    .d-1of3 {
-        @include grid-col;
-        width: 33.33%;
-    }
-
-    .d-2of3 {
-        @include grid-col;
-        width: 66.66%;
-    }
-
-    .d-1of4 {
-        @include grid-col;
-        width: 25%;
-    }
-
-    .d-3of4 {
-        @include grid-col;
-        width: 75%;
-    }
-
-    .d-1of5 {
-        @include grid-col;
-        width: 20%;
-    }
-
-    .d-2of5 {
-        @include grid-col;
-        width: 40%;
-    }
-
-    .d-3of5 {
-        @include grid-col;
-        width: 60%;
-    }
-
-    .d-4of5 {
-        @include grid-col;
-        width: 80%;
-    }
-
-    .d-1of6 {
-        @include grid-col;
-        width: 16.6666666667%;
-    }
-
-    .d-1of7 {
-        @include grid-col;
-        width: 14.2857142857%;
-    }
-
-    .d-2of7 {
-        @include grid-col;
-        width: 28.5714286%;
-    }
-
-    .d-3of7 {
-        @include grid-col;
-        width: 42.8571429%;
-    }
-
-    .d-4of7 {
-        @include grid-col;
-        width: 57.1428572%;
-    }
-
-    .d-5of7 {
-        @include grid-col;
-        width: 71.4285715%;
-    }
-
-    .d-6of7 {
-        @include grid-col;
-        width: 85.7142857%;
-    }
-
-    .d-1of8 {
-        @include grid-col;
-        width: 12.5%;
-    }
-
-    .d-1of9 {
-        @include grid-col;
-        width: 11.1111111111%;
-    }
-
-    .d-1of10 {
-        @include grid-col;
-        width: 10%;
-    }
-
-    .d-1of11 {
-        @include grid-col;
-        width: 9.09090909091%;
-    }
-
-    .d-1of12 {
-        @include grid-col;
-        width: 8.33%;
-    }
-} // end desktop styles
+/* Grid System - @end */
