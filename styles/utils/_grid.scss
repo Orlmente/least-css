@@ -98,8 +98,8 @@ $cols-d: join($cols-d, $cols-7);
 $cols-d: join($cols-d, $cols-8);
 $cols-d: join($cols-d, $cols-9-11);
 $cols-d: join($cols-d, $cols-12);
-$cols-d: join($cols-d, $cols-14);
-$cols-d: join($cols-d, $cols-16);
+// $cols-d: join($cols-d, $cols-14);
+// $cols-d: join($cols-d, $cols-16);
 
 // grids
 $grids: (
@@ -112,7 +112,7 @@ $grids: (
     't': '(min-width: 768px) and (max-width: 1024px)' (
         $cols-t
     ),
-    'd': '(min-width: 1030px)' (
+    'd': '(min-width: 1041px)' (
         $cols-d
     )
 );

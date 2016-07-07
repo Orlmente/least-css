@@ -1,12 +1,19 @@
 /* Fonts - @begin */
 
+// @font-face {
+//   font-family: 'FontAwesome';
+//   src: url('../fonts/fontawesome-webfont.eot?v=4.6.3'); /* IE9 Compat Modes */
+//   src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), /* IE6-IE8 */
+//        url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), /* Modern Browsers */
+//        url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), /* Safari, Android, iOS */
+//        url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=4.6.3') format('svg'); /* Legacy iOS */
+//   font-weight: normal;
+//   font-style: normal;
+// }
 @font-face {
   font-family: 'FontAwesome';
   src: url('../fonts/fontawesome-webfont.eot?v=4.6.3'); /* IE9 Compat Modes */
-  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), /* Modern Browsers */
-       url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=4.6.3') format('svg'); /* Legacy iOS */
+  src: url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }

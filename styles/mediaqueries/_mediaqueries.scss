@@ -1,25 +1,62 @@
 /* Media Queries - @begin */
 
-// Viewports
-@import "viewports/2048";
+//////////////////////////////////////
+//                                  //
+// Only major structural changes    //
+// should be placed here, minor     //
+// fixes should be placed directly  //
+// into partials, as they are more  //
+// readable.                        //
+//                                  //
+// Important:                       //
+// Please put a note into partials  //
+// when you make an override for    //
+// such major changes pointing to   //
+// the affected viewport.           //
+//                                  //
+//////////////////////////////////////
 
-// big screen
-@import "viewports/1400";
+// Viewports
+
+// big screen ( 1400px up )
+@media screen and ( min-width: 1400px ) {
+    @import "viewports/1400up";
+}
+
+// desktop ( 1024px up )
+@media screen and ( min-width: 1041px ) {
+    @import "viewports/1040up";
+}
 
 // ipad landscape
-@import "viewports/1024";
+@media screen and ( max-width: 1040px ) {
+    @import "viewports/1024down";
+}
 
-// generic smaller tablets
-@import "viewports/960";
-@import "viewports/800";
+// generic smaller tablets ( 960px down )
+@media screen and ( max-width: 960px ) {
+    @import "viewports/960down";
+    // @import "viewports/800";
+}
 
 // ipad portrait
-@import "viewports/768";
+@media screen and ( max-width: 768px ) and ( orientation: portrait ) {
+    @import "viewports/768";
+}
 
-// generic mobile portrait
-@import "viewports/360";
+// generic phablet
+@media screen and ( max-width: 767px ) {
+    @import "viewports/767down";
+}
 
-// iphone lt 6
-@import "viewports/320";
+// generic mobile portrait ( 360px down )
+@media screen and ( max-width: 360px ) {
+    @import "viewports/360";
+}
+
+// iphone lt 6 ( 320px down )
+@media screen and ( max-width: 320px ) {
+    @import "viewports/320";
+}
 
 /* Media Queries - @end */
