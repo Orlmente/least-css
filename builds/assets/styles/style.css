@@ -2359,8 +2359,47 @@ img {
 }
 
 /* Floats - @end */
-/* Centering - @begin */
+/* Display - @begin */
 /* line 17, ../../../styles/utils/_utils.scss */
+.inline {
+  display: inline;
+}
+
+/* line 21, ../../../styles/utils/_utils.scss */
+.block {
+  display: block;
+}
+
+/* line 25, ../../../styles/utils/_utils.scss */
+.inline-block {
+  display: inline-block;
+}
+
+/* Display - @end */
+/* Positions - @begin */
+/* line 32, ../../../styles/utils/_utils.scss */
+.static {
+  position: static;
+}
+
+/* line 35, ../../../styles/utils/_utils.scss */
+.relative {
+  position: relative;
+}
+
+/* line 38, ../../../styles/utils/_utils.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 41, ../../../styles/utils/_utils.scss */
+.fixed {
+  position: fixed;
+}
+
+/* Positions - @end */
+/* Centering - @begin */
+/* line 47, ../../../styles/utils/_utils.scss */
 .center {
   position: relative;
   left: 50%;
@@ -2371,7 +2410,7 @@ img {
   transform: translateX(-50%);
 }
 
-/* line 20, ../../../styles/utils/_utils.scss */
+/* line 50, ../../../styles/utils/_utils.scss */
 .middle {
   position: relative;
   top: 50%;
@@ -2382,7 +2421,7 @@ img {
   transform: translateY(-50%);
 }
 
-/* line 23, ../../../styles/utils/_utils.scss */
+/* line 53, ../../../styles/utils/_utils.scss */
 .centered {
   position: relative;
   left: 50%;
@@ -2394,7 +2433,7 @@ img {
   transform: translateX(-50%) translateY(-50%);
 }
 
-/* line 26, ../../../styles/utils/_utils.scss */
+/* line 56, ../../../styles/utils/_utils.scss */
 .absolute-center {
   position: absolute;
   left: 50%;
@@ -2405,7 +2444,7 @@ img {
   transform: translateX(-50%);
 }
 
-/* line 29, ../../../styles/utils/_utils.scss */
+/* line 59, ../../../styles/utils/_utils.scss */
 .absolute-middle {
   position: absolute;
   top: 50%;
@@ -2416,7 +2455,7 @@ img {
   transform: translateY(-50%);
 }
 
-/* line 32, ../../../styles/utils/_utils.scss */
+/* line 62, ../../../styles/utils/_utils.scss */
 .absolute-centered {
   position: absolute;
   left: 50%;
@@ -2430,48 +2469,48 @@ img {
 
 /* Centering - @end */
 /* Sizing - @begin */
-/* line 38, ../../../styles/utils/_utils.scss */
+/* line 68, ../../../styles/utils/_utils.scss */
 .full {
   width: 100%;
 }
 
-/* line 41, ../../../styles/utils/_utils.scss */
+/* line 71, ../../../styles/utils/_utils.scss */
 .half {
   width: 50%;
 }
 
-/* line 44, ../../../styles/utils/_utils.scss */
+/* line 74, ../../../styles/utils/_utils.scss */
 .one-third {
   width: 33.33%;
 }
-/* line 46, ../../../styles/utils/_utils.scss */
+/* line 76, ../../../styles/utils/_utils.scss */
 .one-third:first-child {
   width: 33.34%;
 }
 
-/* line 50, ../../../styles/utils/_utils.scss */
+/* line 80, ../../../styles/utils/_utils.scss */
 .two-third {
   width: 66.66%;
 }
 
-/* line 53, ../../../styles/utils/_utils.scss */
+/* line 83, ../../../styles/utils/_utils.scss */
 .one-fourth {
   width: 25%;
 }
 
-/* line 56, ../../../styles/utils/_utils.scss */
+/* line 86, ../../../styles/utils/_utils.scss */
 .three-fourth {
   width: 75%;
 }
 
-/* line 59, ../../../styles/utils/_utils.scss */
+/* line 89, ../../../styles/utils/_utils.scss */
 .one-fifth {
   width: 20%;
 }
 
 /* Sizing - @end */
 /* Ratios - @begin */
-/* line 65, ../../../styles/utils/_utils.scss */
+/* line 95, ../../../styles/utils/_utils.scss */
 .ratio {
   position: relative;
   display: inline-block;
@@ -2527,27 +2566,27 @@ img {
 }
 
 /* Ratios - @end */
-/* line 78, ../../../styles/utils/_utils.scss */
+/* line 108, ../../../styles/utils/_utils.scss */
 .debug {
   border: 1px dashed red;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 83, ../../../styles/utils/_utils.scss */
+/* line 113, ../../../styles/utils/_utils.scss */
 .debug .debug {
   border-color: blue;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 87, ../../../styles/utils/_utils.scss */
+/* line 117, ../../../styles/utils/_utils.scss */
 .debug .debug .debug {
   border-color: green;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 91, ../../../styles/utils/_utils.scss */
+/* line 121, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug {
   border-color: orange;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 95, ../../../styles/utils/_utils.scss */
+/* line 125, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug .debug {
   border-color: pink;
   background-color: rgba(0, 0, 0, 0.1);
