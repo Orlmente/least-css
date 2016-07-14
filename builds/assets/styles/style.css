@@ -951,7 +951,7 @@ input[disabled] {
     margin-right: 87.5%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1040px) {
   /* line 153, ../../../styles/utils/_grid.scss */
   .t-all {
     width: 100%;
@@ -2329,6 +2329,15 @@ img {
 /* Setup - @end */
 /* Forms - @begin */
 /* Forms - @end */
+/* Base - @begin */
+/* line 3, ../../../styles/pages/_base.scss */
+.wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* Base - @end */
 /* ClearFix - @begin */
 /* line 4, ../../../styles/utils/mixins/_btcf.scss */
 .cf:after {
@@ -2547,7 +2556,21 @@ img {
 /* Media Queries - @begin */
 @media screen and (min-width: 1041px) {
   /* Desktop Up - @begin */
+  /* line 3, ../../../styles/mediaqueries/viewports/_1040up.scss */
+  .wrap {
+    max-width: 1024px;
+  }
+
   /* Desktop Up - @end */
+}
+@media screen and (min-width: 1296px) {
+  /* Big Desktop Up - @begin */
+  /* line 3, ../../../styles/mediaqueries/viewports/_1280up.scss */
+  .wrap {
+    max-width: 1280px;
+  }
+
+  /* Big Desktop Up - @end */
 }
 /* Media Queries - @end */
 /* Vendor overrides - @begin */

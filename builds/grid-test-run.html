@@ -16,7 +16,7 @@
 </head>
 <body class="cf">
     <h3>GRID SYSTEM</h3>
-    <div class="test-block-wrapper cf">
+    <div class="test-block-wrapper wrap cf">
         <h5>columns examples</h5>
         <div class="test-grid-columns columns full cf debug">
             <div class="column m-all t-1of12 d-1of12 cf debug">
@@ -280,7 +280,7 @@
     </div>
     <br/>
     <hr>
-    <div class="test-block-wrapper cf">
+    <div class="test-block-wrapper wrap cf">
         <h5>different viewports with different sizes</h5>
         <div class="test-grid-columns columns full cf debug">
             <div class="column m-1of3 t-1of6 d-1of12 cf debug">
@@ -383,7 +383,32 @@
         </div>
         <br/>
     </div>
+    <br/>
     <hr>
+    <div class="test-block-wrapper wrap cf">
+        <h5>nested grids</h5>
+        <div class="test-grid-columns columns full cf debug">
+            <div class="columns column m-all t-1of2 d-1of2 cf debug">
+                <div class="column m-1of2 cf debug">
+                    <p class="test-column-content debug">m-1of2</p>
+                </div>
+                <div class="column m-1of2 cf debug">
+                    <p class="test-column-content debug">m-1of2</p>
+                </div>
+                <div class="column m-1of2 cf debug">
+                    <p class="test-column-content debug">m-1of2</p>
+                </div>
+                <div class="column m-1of2 cf debug">
+                    <p class="test-column-content debug">m-1of2</p>
+                </div>
+            </div>
+            <div class="columns columns-center column column-stretch m-all t-1of2 d-1of2 cf debug">
+                <div class="column column-middle m-all cf debug">
+                    <p class="test-column-content debug">m-all</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <hr>
 </body>
 </html>
