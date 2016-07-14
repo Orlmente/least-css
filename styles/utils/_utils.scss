@@ -13,6 +13,36 @@
 }
 /* Floats - @end */
 
+/* Display - @begin */
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+/* Display - @end */
+
+/* Positions - @begin */
+// position reset
+.static {
+    position: static;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+/* Positions - @end */
+
 /* Centering - @begin */
 .center {
     @include horizontal-center;
