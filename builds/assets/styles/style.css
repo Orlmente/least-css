@@ -2532,53 +2532,63 @@ img {
 }
 /* line 8, ../../../styles/utils/mixins/_ratios.scss */
 .ratio:before {
+  position: relative;
+  z-index: 1;
   content: '';
   display: block;
 }
+/* line 15, ../../../styles/utils/mixins/_ratios.scss */
+.ratio > .ratio-content {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+/* line 24, ../../../styles/utils/mixins/_ratios.scss */
+.ratio > .ratio-content.no-crop {
+  overflow: visible;
+}
 
-/* line 22, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-1-1:before,
+/* line 37, ../../../styles/utils/mixins/_ratios.scss */
 .ratio-1x1:before {
   padding-top: 100% ;
 }
 
-/* line 22, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-2-1:before,
+/* line 37, ../../../styles/utils/mixins/_ratios.scss */
 .ratio-2x1:before {
   padding-top: 50% ;
 }
 
-/* line 22, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-3-2:before,
+/* line 37, ../../../styles/utils/mixins/_ratios.scss */
 .ratio-3x2:before {
   padding-top: 66.66667% ;
 }
 
-/* line 22, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-4-3:before,
+/* line 37, ../../../styles/utils/mixins/_ratios.scss */
 .ratio-4x3:before {
   padding-top: 75% ;
 }
 
-/* line 22, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-16-9:before,
+/* line 37, ../../../styles/utils/mixins/_ratios.scss */
 .ratio-16x9:before {
   padding-top: 56.25% ;
 }
 
-/* line 22, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-16-10:before,
+/* line 37, ../../../styles/utils/mixins/_ratios.scss */
 .ratio-16x10:before {
   padding-top: 62.5% ;
 }
 
-/* line 22, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-1-2:before,
+/* line 37, ../../../styles/utils/mixins/_ratios.scss */
 .ratio-1x2:before {
   padding-top: 200% ;
 }
 
 /* Ratios - @end */
+/* Debug - @begin */
 /* line 110, ../../../styles/utils/_utils.scss */
 .debug {
   border: 1px dashed red;
@@ -2605,6 +2615,7 @@ img {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* Debug - @end */
 /* Media Queries - @begin */
 @media screen and (min-width: 1041px) {
   /* Desktop Up - @begin */

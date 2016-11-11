@@ -104,9 +104,9 @@
 @include ratios(16,9);
 @include ratios(16,10);
 @include ratios(1,2);
-
 /* Ratios - @end */
 
+/* Debug - @begin */
 .debug {
     border: 1px dashed red;
     background-color: rgba( 0,0,0, 0.1 );
@@ -132,3 +132,4 @@
         }
     }
 }
+/* Debug - @end */
