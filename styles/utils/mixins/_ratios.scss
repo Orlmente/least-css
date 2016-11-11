@@ -6,14 +6,29 @@
     vertical-align: top;
 
     &:before {
+        position: relative;
+        z-index: 1;
         content: '';
         display: block;
+    }
+
+    & > .ratio-content {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow: hidden;
+
+        &.no-crop {
+            overflow: visible;
+        }
     }
 }
 
 @mixin ratios($width:1,$height:1) {
-    .ratio-#{$width}-#{$height},
-    .ratio-#{$width}x#{$height}, {
+    .ratio-#{$width}x#{$height} {
         @include ratio-set($width,$height);
     }
 }
