@@ -1,4 +1,4 @@
-// box sizing
+// deprecated from 2k16.v.1
 @mixin box-sizing($sizing:border-box) {
     -webkit-box-sizing: $sizing;
        -moz-box-sizing: $sizing;
