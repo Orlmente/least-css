@@ -63,6 +63,14 @@
     }
 }
 
+@mixin no-reveal ( $importance: '' ) {
+    &::-ms-reveal {
+        display: none unquote($importance);
+        width: 0 unquote($importance);
+        height: 0 unquote($importance);
+    }
+}
+
 @mixin file-upload($importance: '') {
     &::-webkit-file-upload-button {}
     &::-ms-browse {}
