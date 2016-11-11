@@ -52,6 +52,14 @@
 @mixin no-clear($importance: '') {
     &::-ms-clear {
         display: none unquote($importance);
+        width: 0 unquote($importance);
+        height: 0 unquote($importance);
+    }
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+        display: none;
     }
 }
 
