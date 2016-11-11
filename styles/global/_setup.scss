@@ -67,6 +67,13 @@ h6 {
 }
 
 // Lists
+// 
+// NOTE:
+// 1st level lists won't have bullets/number
+// by design only nested lists will.
+// To add bullets/numbers for 1st level lists
+// there's a .bulltes class in pages/base scss
+
 ol {
     list-style: inside decimal;
 
@@ -77,6 +84,7 @@ ul {
 ol,
 ul {
     margin: $pad auto;
+    list-style: outside none;
 }
 ol ol,
 ul ul,

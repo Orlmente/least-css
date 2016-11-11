@@ -2260,23 +2260,24 @@ h6 {
   font-size: 1.26rem;
 }
 
-/* line 70, ../../../styles/global/_setup.scss */
+/* line 77, ../../../styles/global/_setup.scss */
 ol {
   list-style: inside decimal;
 }
 
-/* line 74, ../../../styles/global/_setup.scss */
+/* line 81, ../../../styles/global/_setup.scss */
 ul {
   list-style: inside disc;
 }
 
-/* line 77, ../../../styles/global/_setup.scss */
+/* line 84, ../../../styles/global/_setup.scss */
 ol,
 ul {
   margin: 1rem auto;
+  list-style: outside none;
 }
 
-/* line 81, ../../../styles/global/_setup.scss */
+/* line 89, ../../../styles/global/_setup.scss */
 ol ol,
 ul ul,
 ol ul,
@@ -2285,30 +2286,30 @@ ul ol {
   font-size: 90%;
 }
 
-/* line 88, ../../../styles/global/_setup.scss */
+/* line 96, ../../../styles/global/_setup.scss */
 ol ol,
 ul ol {
   list-style-type: upper-roman;
 }
 
-/* line 92, ../../../styles/global/_setup.scss */
+/* line 100, ../../../styles/global/_setup.scss */
 ol ul,
 ul ul {
   list-style-type: square;
 }
 
-/* line 96, ../../../styles/global/_setup.scss */
+/* line 104, ../../../styles/global/_setup.scss */
 li {
   margin: 0 auto 1rem;
 }
 
-/* line 101, ../../../styles/global/_setup.scss */
+/* line 109, ../../../styles/global/_setup.scss */
 a,
 button {
   color: inherit;
 }
 
-/* line 107, ../../../styles/global/_setup.scss */
+/* line 115, ../../../styles/global/_setup.scss */
 p,
 span,
 blockquote {
@@ -2323,7 +2324,7 @@ blockquote {
   hyphenate-lines: 3;
 }
 
-/* line 129, ../../../styles/global/_setup.scss */
+/* line 137, ../../../styles/global/_setup.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -2338,6 +2339,15 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+
+/* line 10, ../../../styles/pages/_base.scss */
+.bullets.ol {
+  list-style: inside decimal;
+}
+/* line 13, ../../../styles/pages/_base.scss */
+.bullets.ul {
+  list-style: inside disc;
 }
 
 /* Base - @end */
