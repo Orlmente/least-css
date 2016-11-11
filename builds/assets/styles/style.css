@@ -2342,11 +2342,12 @@ img {
 }
 
 /* line 10, ../../../styles/pages/_base.scss */
-.bullets.ol {
+ol.bullets {
   list-style: inside decimal;
 }
-/* line 13, ../../../styles/pages/_base.scss */
-.bullets.ul {
+
+/* line 15, ../../../styles/pages/_base.scss */
+ul.bullets {
   list-style: inside disc;
 }
 
@@ -2521,9 +2522,24 @@ img {
   width: 20%;
 }
 
+/* line 94, ../../../styles/utils/_utils.scss */
+.two-fifth {
+  width: 40%;
+}
+
+/* line 97, ../../../styles/utils/_utils.scss */
+.three-fifth {
+  width: 60%;
+}
+
+/* line 100, ../../../styles/utils/_utils.scss */
+.four-fifth {
+  width: 80%;
+}
+
 /* Sizing - @end */
 /* Ratios - @begin */
-/* line 97, ../../../styles/utils/_utils.scss */
+/* line 106, ../../../styles/utils/_utils.scss */
 .ratio {
   position: relative;
   display: inline-block;
@@ -2589,27 +2605,27 @@ img {
 
 /* Ratios - @end */
 /* Debug - @begin */
-/* line 110, ../../../styles/utils/_utils.scss */
+/* line 119, ../../../styles/utils/_utils.scss */
 .debug {
   border: 1px dashed red;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 115, ../../../styles/utils/_utils.scss */
+/* line 124, ../../../styles/utils/_utils.scss */
 .debug .debug {
   border-color: blue;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 119, ../../../styles/utils/_utils.scss */
+/* line 128, ../../../styles/utils/_utils.scss */
 .debug .debug .debug {
   border-color: green;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 123, ../../../styles/utils/_utils.scss */
+/* line 132, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug {
   border-color: orange;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 127, ../../../styles/utils/_utils.scss */
+/* line 136, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug .debug {
   border-color: pink;
   background-color: rgba(0, 0, 0, 0.1);

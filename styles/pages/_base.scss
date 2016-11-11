@@ -6,11 +6,13 @@
     width: 100%;
 }
 
-.bullets {
-    &.ol {
+ol {
+    &.bullets {
         list-style: inside decimal;
     }
-    &.ul {
+}
+ul {
+    &.bullets {
         list-style: inside disc;
     }
 }
