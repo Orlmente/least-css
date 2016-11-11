@@ -2128,8 +2128,8 @@ input[disabled] {
 .icon {
   position: relative;
   display: inline-block;
-  height: 1.4rem;
-  width: 1.4rem;
+  height: 1em;
+  width: 1.1em;
   overflow: hidden;
 }
 /* line 10, ../../../styles/fonts/_icons.scss */
@@ -2166,12 +2166,15 @@ input[disabled] {
 /* line 40, ../../../styles/fonts/_icons.scss */
 .icon-label {
   display: inherit;
+}
+/* line 43, ../../../styles/fonts/_icons.scss */
+.icon:not(.icon-before):not(.icon-after) .icon-label {
   overflow: hidden;
   text-indent: 101%;
   white-space: nowrap;
 }
 
-/* line 51, ../../../styles/fonts/_icons.scss */
+/* line 54, ../../../styles/fonts/_icons.scss */
 .icon-star:before {
   content: "";
 }
