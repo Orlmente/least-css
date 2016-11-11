@@ -28,8 +28,13 @@
 
 // total centering
 @mixin total-center ( $position: relative ) {
+    @include custom-centering( $position );
+}
+
+// custom positioning
+@mixin custom-centering ( $position: relative, $x: 50%, $y: 50% ) {
     position: $position;
     left: 50%;
     top: 50%;
-    @include transform( translateX(-50%) translateY(-50%) );
+    @include transform( translateX( #{-1*$x} ) translateY( #{-1*$y} ) );
 }
