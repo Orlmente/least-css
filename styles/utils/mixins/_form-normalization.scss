@@ -12,10 +12,15 @@
     }
 }
 
-@mixin no-appearance ($importance) {
-    -webkit-appearance: none unquote($importance);
-       -moz-appearance: none unquote($importance);
-            appearance: none unquote($importance);
+@mixin appearance ( $importance: '', $appearance: none ) {
+    -webkit-appearance: $appearance unquote($importance);
+       -moz-appearance: $appearance unquote($importance);
+        -ms-appearance: $appearance unquote($importance);
+            appearance: $appearance unquote($importance);
+}
+
+@mixin no-appearance ($importance: '') {
+    @include appearance($importance, none);
 }
 
 @mixin no-box-shadow ($importance) {
