@@ -1,6 +1,6 @@
 /* Grid System - @begin */
 
-$gutter: 1rem;
+$gutter: $pad;
 
 // using a mixin since we can't use placeholder selectors
 @mixin grid-col($padding: $gutter) {
