@@ -35,9 +35,11 @@
     outline: 0 none unquote($importance);
 }
 
-@mixin no-autofill($importance) {
+@mixin no-autofill($importance: '', $bg: #fff, $fg: #000) {
     &:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px white inset unquote($importance);
+        -webkit-box-shadow: 0 0 0px 1000px $bg inset unquote($importance);
+        color: $fg unquote($importance);
+        -webkit-text-fill-color: $fg unquote($importance);
     }
 }
 
