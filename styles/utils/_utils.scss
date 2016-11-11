@@ -73,7 +73,9 @@
 }
 .one-third {
     width: 33.33%;
-    &:first-child {
+    &:first-child,
+    & + .two-third,
+    .two-third + & {
         width: 33.34%;
     }
 }
