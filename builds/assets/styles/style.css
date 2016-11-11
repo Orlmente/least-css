@@ -2222,7 +2222,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 auto 10px;
+  margin: 0 auto 1rem;
   font-weight: bold;
   line-height: normal;
 }
@@ -2270,7 +2270,7 @@ ul {
 /* line 77, ../../../styles/global/_setup.scss */
 ol,
 ul {
-  margin: 10px auto;
+  margin: 1rem auto;
 }
 
 /* line 81, ../../../styles/global/_setup.scss */
@@ -2278,7 +2278,7 @@ ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-left: 30px;
+  margin-left: 3rem;
   font-size: 90%;
 }
 
@@ -2296,7 +2296,7 @@ ul ul {
 
 /* line 96, ../../../styles/global/_setup.scss */
 li {
-  margin: 0 auto 10px;
+  margin: 0 auto 1rem;
 }
 
 /* line 101, ../../../styles/global/_setup.scss */
@@ -2484,33 +2484,33 @@ img {
   width: 33.33%;
 }
 /* line 76, ../../../styles/utils/_utils.scss */
-.one-third:first-child {
+.one-third:first-child, .one-third + .two-third, .two-third + .one-third {
   width: 33.34%;
 }
 
-/* line 80, ../../../styles/utils/_utils.scss */
+/* line 82, ../../../styles/utils/_utils.scss */
 .two-third {
   width: 66.66%;
 }
 
-/* line 83, ../../../styles/utils/_utils.scss */
+/* line 85, ../../../styles/utils/_utils.scss */
 .one-fourth {
   width: 25%;
 }
 
-/* line 86, ../../../styles/utils/_utils.scss */
+/* line 88, ../../../styles/utils/_utils.scss */
 .three-fourth {
   width: 75%;
 }
 
-/* line 89, ../../../styles/utils/_utils.scss */
+/* line 91, ../../../styles/utils/_utils.scss */
 .one-fifth {
   width: 20%;
 }
 
 /* Sizing - @end */
 /* Ratios - @begin */
-/* line 95, ../../../styles/utils/_utils.scss */
+/* line 97, ../../../styles/utils/_utils.scss */
 .ratio {
   position: relative;
   display: inline-block;
@@ -2566,27 +2566,27 @@ img {
 }
 
 /* Ratios - @end */
-/* line 108, ../../../styles/utils/_utils.scss */
+/* line 110, ../../../styles/utils/_utils.scss */
 .debug {
   border: 1px dashed red;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 113, ../../../styles/utils/_utils.scss */
+/* line 115, ../../../styles/utils/_utils.scss */
 .debug .debug {
   border-color: blue;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 117, ../../../styles/utils/_utils.scss */
+/* line 119, ../../../styles/utils/_utils.scss */
 .debug .debug .debug {
   border-color: green;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 121, ../../../styles/utils/_utils.scss */
+/* line 123, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug {
   border-color: orange;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 125, ../../../styles/utils/_utils.scss */
+/* line 127, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug .debug {
   border-color: pink;
   background-color: rgba(0, 0, 0, 0.1);
@@ -2597,7 +2597,7 @@ img {
   /* Desktop Up - @begin */
   /* line 3, ../../../styles/mediaqueries/viewports/_1040up.scss */
   .wrap {
-    max-width: 1024px;
+    max-width: 102.4rem;
   }
 
   /* Desktop Up - @end */
@@ -2606,7 +2606,7 @@ img {
   /* Big Desktop Up - @begin */
   /* line 3, ../../../styles/mediaqueries/viewports/_1280up.scss */
   .wrap {
-    max-width: 1280px;
+    max-width: 128rem;
   }
 
   /* Big Desktop Up - @end */
