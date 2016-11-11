@@ -27,6 +27,75 @@
 }
 /* Display - @end */
 
+/* Visibility - @begin */
+.p-down.p-down,
+.t-up.t-up,
+.t-down.t-down,
+.d-up.d-up {
+    display: none;
+}
+@media ( max-width: 767px ) {
+    .p-down.p-down {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+@media ( min-width: 768px ) {
+    .t-up.t-up {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+@media ( max-width: 1040px ) {
+    .t-down.t-down {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+@media ( min-width: 1041px ) {
+    .d-up.d-up {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+/* Visibility - @end */
+
 /* Positions - @begin */
 // position reset
 .static {
