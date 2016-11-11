@@ -13,6 +13,105 @@
 }
 /* Floats - @end */
 
+/* Display - @begin */
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+/* Display - @end */
+
+/* Visibility - @begin */
+.p-down.p-down,
+.t-up.t-up,
+.t-down.t-down,
+.d-up.d-up {
+    display: none;
+}
+@media ( max-width: 767px ) {
+    .p-down.p-down {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+@media ( min-width: 768px ) {
+    .t-up.t-up {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+@media ( max-width: 1040px ) {
+    .t-down.t-down {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+@media ( min-width: 1041px ) {
+    .d-up.d-up {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+}
+/* Visibility - @end */
+
+/* Positions - @begin */
+// position reset
+.static {
+    position: static;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.fixed {
+    position: fixed;
+}
+/* Positions - @end */
+
 /* Centering - @begin */
 .center {
     @include horizontal-center;
@@ -43,7 +142,9 @@
 }
 .one-third {
     width: 33.33%;
-    &:first-child {
+    &:first-child,
+    & + .two-third,
+    .two-third + & {
         width: 33.34%;
     }
 }
@@ -59,6 +160,15 @@
 .one-fifth {
     width: 20%;
 }
+.two-fifth {
+    width: 40%;
+}
+.three-fifth {
+    width: 60%;
+}
+.four-fifth {
+    width: 80%;
+}
 /* Sizing - @end */
 
 /* Ratios - @begin */
@@ -72,9 +182,9 @@
 @include ratios(16,9);
 @include ratios(16,10);
 @include ratios(1,2);
-
 /* Ratios - @end */
 
+/* Debug - @begin */
 .debug {
     border: 1px dashed red;
     background-color: rgba( 0,0,0, 0.1 );
@@ -100,3 +210,4 @@
         }
     }
 }
+/* Debug - @end */

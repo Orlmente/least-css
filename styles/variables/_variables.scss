@@ -1,13 +1,7 @@
 // variables
 
 // colors
-$white            : #fff;
-$optic-white      : #fafafa;
-$black            : #1e1e1e;
-$real-black       : #000;
-
-$overlay-bg       : rgba(0,0,0,0.75);
-$overlay-bg-light : rgba(255,255,255,0.65);
+@import "colors";
 
 // fonts (from bourbon font-stack)
 $sans  : $helvetica;
@@ -30,7 +24,8 @@ $demi : 600;
 $bold : 700;
 
 // sizes
-$pad-module  : 10px;
+$pad-module  : 1rem;
+$pad         : $pad-module;
 $icon-height : $base-font-size;
 $icon-width  : $base-font-size;
 

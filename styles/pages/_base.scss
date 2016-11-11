@@ -1,0 +1,20 @@
+/* Base - @begin */
+
+.wrap {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+ol {
+    &.bullets {
+        list-style: inside decimal;
+    }
+}
+ul {
+    &.bullets {
+        list-style: inside disc;
+    }
+}
+
+/* Base - @end */

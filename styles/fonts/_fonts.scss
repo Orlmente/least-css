@@ -1,19 +1,13 @@
 /* Fonts - @begin */
 
-// @font-face {
-//   font-family: 'FontAwesome';
-//   src: url('../fonts/fontawesome-webfont.eot?v=4.6.3'); /* IE9 Compat Modes */
-//   src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), /* IE6-IE8 */
-//        url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), /* Modern Browsers */
-//        url('../fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), /* Safari, Android, iOS */
-//        url('../fonts/fontawesome-webfont.svg#fontawesomeregular?v=4.6.3') format('svg'); /* Legacy iOS */
-//   font-weight: normal;
-//   font-style: normal;
-// }
+// src: url('../fonts/fontawesome-webfont.eot?v=4.7.0'); /* IE9 Compat Modes */
+// src: url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'); /* Modern Browsers */
+// src: url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'); /* Modern Browsers */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome-webfont.eot?v=4.6.3'); /* IE9 Compat Modes */
-  src: url('../fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'); /* Modern Browsers */
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0'); /* IE9 Compat Modes */
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'); /* Modern Browsers */
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'); /* Modern Browsers */
   font-weight: normal;
   font-style: normal;
 }

@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0 auto $pad-module;
+    margin: 0 auto $pad;
     font-weight: bold;
     line-height: normal;
 }
@@ -67,6 +67,13 @@ h6 {
 }
 
 // Lists
+// 
+// NOTE:
+// 1st level lists won't have bullets/number
+// by design only nested lists will.
+// To add bullets/numbers for 1st level lists
+// there's a .bulltes class in pages/base scss
+
 ol {
     list-style: inside decimal;
 
@@ -76,13 +83,14 @@ ul {
 }
 ol,
 ul {
-    margin: $pad-module auto;
+    margin: $pad auto;
+    list-style: outside none;
 }
 ol ol,
 ul ul,
 ol ul,
 ul ol {
-    margin-left: $pad-module*3;
+    margin-left: $pad*3;
     font-size: 90%;
 }
 ol ol,
@@ -94,7 +102,7 @@ ul ul {
     list-style-type: square;
 }
 li {
-    margin: 0 auto $pad-module;
+    margin: 0 auto $pad;
 }
 
 // Links

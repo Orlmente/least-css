@@ -3,8 +3,8 @@
 .icon {
     position: relative;
     display: inline-block;
-    height: $icon-height;
-    width: $icon-width;
+    height: 1em;
+    width: 1.1em;
     overflow: hidden;
 
     &:before {
@@ -39,7 +39,10 @@
 }
 .icon-label {
     display: inherit;
-    @include hide-text;
+
+    .icon:not(.icon-before):not(.icon-after) & {
+        @include hide-text;
+    }
 }
 
 // put all icons in this list
