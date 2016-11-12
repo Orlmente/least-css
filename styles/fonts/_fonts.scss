@@ -6,9 +6,9 @@
 @font-face {
   font-family: 'FontAwesome';
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0'); /* IE9 Compat Modes */
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'); /* Modern Browsers */
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), /* Modern Browsers */
   src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'); /* Modern Browsers */
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
