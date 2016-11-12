@@ -1,12 +1,12 @@
 // colors
 
-$white            : #fff;
-$optic-white      : #fafafa;
-$black            : #000;
-$optic-black      : #1e1e1e;
+$white             : #fff;
+$optic-white       : #fafafa;
+$black             : #000;
+$optic-black       : #1e1e1e;
 
-$overlay-bg       : rgba(0,0,0,0.75);
-$overlay-bg-light : rgba(255,255,255,0.65);
-$transparent      : transparent;
-$transparent-black: rgba($black, 0);
-$transparent-white: rgba($white, 0);
+$overlay-bg        : rgba($black, 0.75);
+$overlay-bg-white  : rgba($white, 0.65);
+$transparent       : transparent;
+$transparent-black : rgba($black, 0);
+$transparent-white : rgba($white, 0);
