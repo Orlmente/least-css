@@ -28,7 +28,7 @@
     @import "viewports/360";
 }
 
-// generic phablet
+// generic phablet (targets iphone6+ too)
 @media screen and ( max-width: 767px ) {
     @import "viewports/767down";
 }
@@ -38,7 +38,7 @@
     @import "viewports/768";
 }
 
-// generic smaller tablets ( 960px down )
+// generic smaller tablets and mobiles ( 960px down )
 @media screen and ( max-width: 960px ) {
     @import "viewports/960down";
     // @import "viewports/800";
