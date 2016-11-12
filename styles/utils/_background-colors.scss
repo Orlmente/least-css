@@ -1,0 +1,34 @@
+/* Background Colors - @begin */
+
+// hover color variation amount
+// (percent to be applied to darken/lighten functions)
+$hover-variation: 10%;
+
+// colors list
+// you can define different hover variations like:
+// "default" : $color "darken|lighten" $hover-variation,
+// "custom"  : $color "darken|lighten" 23%,
+$bg-colors: (
+    "white" : $white "darken" $hover-variation,
+    "black" : $black "lighten" $hover-variation,
+);
+
+// loop throug the colors list to generate classes
+@each $name, $color in $bg-colors {
+    // background colors classes
+    .bg-#{$name} {
+        background-color: #{nth($color, 1)};
+    }
+
+    // background colors hover statuses
+    .bg-#{$name}-hover:hover {
+        @if ( nth($color, 2) == 'darken' ) {
+            color: darken( nth($color, 1), nth($color, 3) );
+        }
+        @if ( nth($color, 2) == 'lighten' ) {
+            color: lighten( nth($color, 1), nth($color, 3) );
+        }
+    }
+}
+
+/* Background Colors - @end */

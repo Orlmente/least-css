@@ -365,3 +365,13 @@ Typical output of that cmd is:
 ## 5) LEGALS
 
 Licensed under MIT & WTFPL
+
+---
+
+
+
+## 6) TODO (coming next)
+
+*   updated README
+*   updated test run htmls
+*   ...who knows...

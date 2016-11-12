@@ -14,6 +14,8 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 body {
@@ -44,8 +46,9 @@ h4,
 h5,
 h6 {
     margin: 0 auto $pad;
-    font-weight: bold;
+    font-weight: $bold;
     line-height: normal;
+    text-rendering: optimizelegibility;
 }
 h1 {
     font-size: $base-font-size*2.5;
