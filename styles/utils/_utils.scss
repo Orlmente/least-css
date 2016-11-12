@@ -25,6 +25,17 @@
 .inline-block {
     display: inline-block;
 }
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.invisible {
+    visibility: hidden;
+    opacity: 0;
+}
+
 /* Display - @end */
 
 /* Visibility - @begin */
@@ -46,6 +57,7 @@
         }
         &.hidden {
             display: none;
+            visibility: hidden;
         }
     }
 }
@@ -61,6 +73,7 @@
         }
         &.hidden {
             display: none;
+            visibility: hidden;
         }
     }
 }
@@ -76,6 +89,7 @@
         }
         &.hidden {
             display: none;
+            visibility: hidden;
         }
     }
 }
@@ -91,6 +105,7 @@
         }
         &.hidden {
             display: none;
+            visibility: hidden;
         }
     }
 }
