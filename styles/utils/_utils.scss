@@ -203,6 +203,23 @@
 }
 /* Sizing - @end */
 
+/* Backgrounds (images, sizes, etc) - @begin */
+.bg-img {
+    @include bg-img();
+    // Defaults to:
+    // background-color: transparent;
+    // background-repeat: no-repeat;
+    // background-attachment: scroll;
+    // background-position: 50%;
+}
+.bg-contain {
+    @include bg-size(contain);
+}
+.bg-cover {
+    @include bg-size(cover);
+}
+/* Backgrounds (images, sizes, etc) - @end */
+
 /* Ratios - @begin */
 .ratio {
     @include ratio;

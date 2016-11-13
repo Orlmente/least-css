@@ -2741,8 +2741,28 @@ ul.bullets {
 }
 
 /* Sizing - @end */
-/* Ratios - @begin */
+/* Backgrounds (images, sizes, etc) - @begin */
 /* line 207, ../../../styles/utils/_utils.scss */
+.bg-img {
+  background-color: transparent ;
+  background-repeat: no-repeat ;
+  background-attachment: scroll ;
+  background-position: 50%  ;
+}
+
+/* line 215, ../../../styles/utils/_utils.scss */
+.bg-contain {
+  background-size: contain  ;
+}
+
+/* line 218, ../../../styles/utils/_utils.scss */
+.bg-cover {
+  background-size: cover  ;
+}
+
+/* Backgrounds (images, sizes, etc) - @end */
+/* Ratios - @begin */
+/* line 224, ../../../styles/utils/_utils.scss */
 .ratio {
   position: relative;
   display: inline-block;
@@ -2803,27 +2823,27 @@ ul.bullets {
 
 /* Ratios - @end */
 /* Debug - @begin */
-/* line 220, ../../../styles/utils/_utils.scss */
+/* line 237, ../../../styles/utils/_utils.scss */
 .debug {
   border: 1px dashed red;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 225, ../../../styles/utils/_utils.scss */
+/* line 242, ../../../styles/utils/_utils.scss */
 .debug .debug {
   border-color: blue;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 229, ../../../styles/utils/_utils.scss */
+/* line 246, ../../../styles/utils/_utils.scss */
 .debug .debug .debug {
   border-color: green;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 233, ../../../styles/utils/_utils.scss */
+/* line 250, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug {
   border-color: orange;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 237, ../../../styles/utils/_utils.scss */
+/* line 254, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug .debug {
   border-color: pink;
   background-color: rgba(0, 0, 0, 0.1);
