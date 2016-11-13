@@ -1,0 +1,82 @@
+// Background images mixin
+
+// Set color (defaults to transparent)
+@mixin bg-color ($color: transparent, $importance: '') {
+    background-color: $color unquote($importance);
+}
+
+// Set image url if any (defaults to no output when empty string is passed)
+@mixin bg-image ($image: '', $importance: '') {
+    @if ( $image != '' ) {
+        background-image: url($image) unquote($importance);
+    }
+}
+
+// Set repeat mode (defaults to no-repeat)
+@mixin bg-repeat ($repeat: no-repeat, $importance: '') {
+    background-repeat: $repeat unquote($importance);
+}
+
+// Set attachment kind (defaults to scroll)
+@mixin bg-attachment ($attachment: scroll, $importance: '') {
+    background-attachment: $attachment unquote($importance);
+}
+
+// Set position, just one or both (defaults to 50%)
+@mixin bg-position ($x: 50%, $y: '', $importance: '') {
+    background-position: $x unquote($y) unquote($importance);
+}
+
+// Set size (defaults to cover)
+@mixin bg-size ($w: cover, $h: '', $importance: '') {
+    background-size: $w unquote($h) unquote($importance);
+}
+
+// Set all background properties at once
+// params order is:
+// color,
+// repeat,
+// attachment,
+// position X,
+// position Y,
+// size or with,
+// height,
+// importance,
+// url
+@mixin bg-img ( $c: '', $r: '', $a: '', $x: '', $y: '', $w: '', $h: '', $importance: '', $i: '' ) {
+
+    @if ( $c != '' ) {
+        @include bg-color( $c, $importance );
+    } @else {
+        @include bg-color();
+    }
+
+    @if ( $r != '' ) {
+        @include bg-repeat( $r, $importance );
+    } @else {
+        @include bg-repeat();
+    }
+
+    @if ( $a != '' ) {
+        @include bg-attachment( $a, $importance );
+    } @else {
+        @include bg-attachment();
+    }
+
+    // applied only if !default
+    @if ( $x != '' ) {
+        @include bg-position( $x, $y, $importance );
+    } @else {
+        @include bg-position();
+    }
+
+    // applied only if !default
+    @if ( $w != '' ) {
+        @include bg-size( $w, $h, $importance );
+    }
+
+    // applied only if !default
+    @if ( $i != '' ) {
+        @include bg-image( $i, $importance );
+    }
+}

@@ -17,6 +17,12 @@ ul {
     }
 }
 
-blockquote, q {
+blockquote,
+q,
+pre {
     margin: 1em 1.5em;
+}
+
+label {
+    cursor: pointer;
 }

@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Test style</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <style>
+        /* Demo style */
+        html {
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+        }
+        fieldset + fieldset,
+        div + fieldset,
+        fieldset + div {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body class="cf">
     <div><small>v.1.0</small></div>
@@ -22,11 +33,14 @@
         <hr>
         <h3 class="demo-tags-block-heading">Texts</h3>
         <div class="demo-tags-block">
-            Normal text<br/><span>Span text</span><br/><strong>Strong text</strong><br/><em>Emphatize text</em><br/><u>Unerline Text</u><br/><a href="#">Link text</a>
+            Normal text <sup>Sup text</sup><sub>Sub text</sub><br/><span>Span text</span><br/><strong>Strong text</strong><br/><em>Emphatize text</em><br/><u>Unerline Text</u><br/><abbr title="Abbreviation">Abbr.</abbr><br/><dfn title="Definition">Def.</dfn><br/><a href="#">Link text</a>
             <blockquote>Blockquote text</blockquote>
             <q>Short quote text</q>
-            <hr>
-            <h4>Paragraphs (adiacent p tags)</h4>
+            <pre>Preformatted text</pre>
+        </div>
+        <hr>
+        <h3 class="demo-tags-block-heading">Paragraphs (adiacent p tags)</h3>
+        <div class="demo-tags-block">
             <p>First paragraph</p>
             <p>Second paragraph</p>
             <p>Second paragraph</p>
@@ -120,6 +134,100 @@
                 <li>Ordered list item 2</li>
                 <li>Ordered list item 3</li>
             </ol>
+        </div>
+        <hr>
+        <h3 class="demo-tags-block-heading">Form elements <small>(not yet implemented)</small></h3>
+        <div class="demo-tags-block cf">
+            <form action="#">
+                <fieldset>
+                    <input type="text" name="text" id="text">
+                    <label for="text">Input:text</label>
+                </fieldset>
+                <fieldset>
+                    <select name="select" id="select">
+                        <option value="">Option default</option>
+                        <option value="1">Option 01</option>
+                        <option value="2">Option 02</option>
+                        <option value="3">Option 03</option>
+                    </select>
+                </fieldset>
+                <fieldset>
+                    <div class="cf">
+                        <input type="checkbox" name="check" id="check-1">
+                        <label for="check-1">Checkbox 1</label>
+                    </div>
+                    <div class="cf">
+                        <input type="checkbox" name="check" id="check-2">
+                        <label for="check-2">Checkbox 2</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="cf">
+                        <input type="radio" name="radio" id="radio-1">
+                        <label for="radio-1">Radio 1</label>
+                    </div>
+                    <div class="cf">
+                        <input type="radio" name="radio" id="radio-2">
+                        <label for="radio-2">Radio 2</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <input type="password" name="password" id="password">
+                    <label for="password">Input:password</label>
+                </fieldset>
+                <fieldset>
+                    <input type="email" name="email" id="email">
+                    <label for="email">Input:email (!ie9)</label>
+                </fieldset>
+                <fieldset>
+                    <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+                    <label for="textarea">Textarea</label>
+                </fieldset>
+                <fieldset>
+                    <input type="file" name="file" id="file">
+                    <label for="file">Input:file</label>
+                </fieldset>
+                <div>
+                    <button>Button</button>
+                    <input type="button" value="Input:button">
+                    <input type="image" src="#" alt="Input:image">
+                    <input type="reset" value="Input:reset">
+                    <input type="submit" value="Input:submit">
+                </div>
+            </form>
+        </div>
+        <hr>
+        <h3 class="demo-tags-block-heading">Tables (not yet implemented)</h3>
+        <div class="demo-tags-block">
+            <table class="half">
+                <caption>Table caption</caption>
+                <thead>
+                    <tr>
+                        <th>Table header cell 1</th>
+                        <th>Table header cell 2</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td>Table footer cell 1</td>
+                        <td>Table footer cell 2</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Table body row 1 cell 1</td>
+                        <td>Table body row 1 cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>Table body row 2 cell 1</td>
+                        <td>Table body row 2 cell 2</td>
+                    </tr>
+                    <tr>
+                        <td>Table body row 3 cell 1</td>
+                        <td>Table body row 3 cell 2</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <hr>
         <h3 class="demo-tags-block-heading">Ratios</h3>
