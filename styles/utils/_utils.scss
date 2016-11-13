@@ -42,6 +42,7 @@
 .p-down.p-down,
 .t-up.t-up,
 .t-down.t-down,
+.t-only.t-only,
 .d-up.d-up {
     display: none;
 }
@@ -79,6 +80,22 @@
 }
 @media ( max-width: 1040px ) {
     .t-down.t-down {
+        display: block;
+
+        &.inline-block {
+            display: inline-block;
+        }
+        &.inline {
+            display: inline;
+        }
+        &.hidden {
+            display: none;
+            visibility: hidden;
+        }
+    }
+}
+@media ( min-width: 768px ) and ( max-width: 1040px ) {
+    .t-only.t-only {
         display: block;
 
         &.inline-block {
@@ -196,7 +213,7 @@
 @include ratios(4,3);
 @include ratios(16,9);
 @include ratios(16,10);
-@include ratios(1,2);
+// @include ratios(1,2);
 /* Ratios - @end */
 
 /* Debug - @begin */
