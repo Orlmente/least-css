@@ -1,0 +1,22 @@
+// Setup extend (fine tuning)
+
+// Nested Lists 3rd level up
+ol {
+    & & &,
+    ul & &,
+    ul ul &, {
+        list-style-type: lower-alpha;
+    }
+}
+
+ul {
+    & & &,
+    ol & &,
+    ol ol & {
+        list-style-type: circle;
+    }
+}
+
+blockquote, q {
+    margin: 1em 1.5em;
+}
