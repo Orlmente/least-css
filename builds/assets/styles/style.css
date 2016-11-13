@@ -2350,11 +2350,13 @@ ul ul ul, ol ul ul, ol ol ul {
 }
 
 /* line 20, ../../../styles/global/_setup-extend.scss */
-blockquote, q {
+blockquote,
+q,
+pre {
   margin: 1em 1.5em;
 }
 
-/* line 24, ../../../styles/global/_setup-extend.scss */
+/* line 26, ../../../styles/global/_setup-extend.scss */
 label {
   cursor: pointer;
 }
