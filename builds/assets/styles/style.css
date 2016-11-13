@@ -2174,9 +2174,9 @@ input[disabled] {
   white-space: nowrap;
 }
 
-/* line 54, ../../../styles/fonts/_icons.scss */
-.icon-star:before {
-  content: "";
+/* line 55, ../../../styles/fonts/_icons.scss */
+.icon-test:before {
+  content: "";
 }
 
 /* Icons - @end */
@@ -2285,8 +2285,8 @@ ol ol,
 ul ul,
 ol ul,
 ul ol {
-  margin-left: 3rem;
-  font-size: 90%;
+  margin-left: 2em;
+  font-size: 95%;
 }
 
 /* line 99, ../../../styles/global/_setup.scss */
@@ -2315,7 +2315,8 @@ button {
 /* line 118, ../../../styles/global/_setup.scss */
 p,
 span,
-blockquote {
+blockquote,
+q {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
@@ -2328,9 +2329,29 @@ blockquote {
 }
 
 /* line 140, ../../../styles/global/_setup.scss */
+p + p {
+  margin-top: 1em;
+}
+
+/* line 145, ../../../styles/global/_setup.scss */
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* line 5, ../../../styles/global/_setup-extend.scss */
+ol ol ol, ul ol ol, ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+/* line 13, ../../../styles/global/_setup-extend.scss */
+ul ul ul, ol ul ul, ol ol ul {
+  list-style-type: circle;
+}
+
+/* line 20, ../../../styles/global/_setup-extend.scss */
+blockquote, q {
+  margin: 1em 1.5em;
 }
 
 /* Setup - @end */
@@ -2466,81 +2487,101 @@ ul.bullets {
 .p-down.p-down,
 .t-up.t-up,
 .t-down.t-down,
+.t-only.t-only,
 .d-up.d-up {
   display: none;
 }
 
 @media (max-width: 767px) {
-  /* line 49, ../../../styles/utils/_utils.scss */
+  /* line 50, ../../../styles/utils/_utils.scss */
   .p-down.p-down {
     display: block;
   }
-  /* line 52, ../../../styles/utils/_utils.scss */
+  /* line 53, ../../../styles/utils/_utils.scss */
   .p-down.p-down.inline-block {
     display: inline-block;
   }
-  /* line 55, ../../../styles/utils/_utils.scss */
+  /* line 56, ../../../styles/utils/_utils.scss */
   .p-down.p-down.inline {
     display: inline;
   }
-  /* line 58, ../../../styles/utils/_utils.scss */
+  /* line 59, ../../../styles/utils/_utils.scss */
   .p-down.p-down.hidden {
     display: none;
     visibility: hidden;
   }
 }
 @media (min-width: 768px) {
-  /* line 65, ../../../styles/utils/_utils.scss */
+  /* line 66, ../../../styles/utils/_utils.scss */
   .t-up.t-up {
     display: block;
   }
-  /* line 68, ../../../styles/utils/_utils.scss */
+  /* line 69, ../../../styles/utils/_utils.scss */
   .t-up.t-up.inline-block {
     display: inline-block;
   }
-  /* line 71, ../../../styles/utils/_utils.scss */
+  /* line 72, ../../../styles/utils/_utils.scss */
   .t-up.t-up.inline {
     display: inline;
   }
-  /* line 74, ../../../styles/utils/_utils.scss */
+  /* line 75, ../../../styles/utils/_utils.scss */
   .t-up.t-up.hidden {
     display: none;
     visibility: hidden;
   }
 }
 @media (max-width: 1040px) {
-  /* line 81, ../../../styles/utils/_utils.scss */
+  /* line 82, ../../../styles/utils/_utils.scss */
   .t-down.t-down {
     display: block;
   }
-  /* line 84, ../../../styles/utils/_utils.scss */
+  /* line 85, ../../../styles/utils/_utils.scss */
   .t-down.t-down.inline-block {
     display: inline-block;
   }
-  /* line 87, ../../../styles/utils/_utils.scss */
+  /* line 88, ../../../styles/utils/_utils.scss */
   .t-down.t-down.inline {
     display: inline;
   }
-  /* line 90, ../../../styles/utils/_utils.scss */
+  /* line 91, ../../../styles/utils/_utils.scss */
   .t-down.t-down.hidden {
     display: none;
     visibility: hidden;
   }
 }
+@media (min-width: 768px) and (max-width: 1040px) {
+  /* line 98, ../../../styles/utils/_utils.scss */
+  .t-only.t-only {
+    display: block;
+  }
+  /* line 101, ../../../styles/utils/_utils.scss */
+  .t-only.t-only.inline-block {
+    display: inline-block;
+  }
+  /* line 104, ../../../styles/utils/_utils.scss */
+  .t-only.t-only.inline {
+    display: inline;
+  }
+  /* line 107, ../../../styles/utils/_utils.scss */
+  .t-only.t-only.hidden {
+    display: none;
+    visibility: hidden;
+  }
+}
 @media (min-width: 1041px) {
-  /* line 97, ../../../styles/utils/_utils.scss */
+  /* line 114, ../../../styles/utils/_utils.scss */
   .d-up.d-up {
     display: block;
   }
-  /* line 100, ../../../styles/utils/_utils.scss */
+  /* line 117, ../../../styles/utils/_utils.scss */
   .d-up.d-up.inline-block {
     display: inline-block;
   }
-  /* line 103, ../../../styles/utils/_utils.scss */
+  /* line 120, ../../../styles/utils/_utils.scss */
   .d-up.d-up.inline {
     display: inline;
   }
-  /* line 106, ../../../styles/utils/_utils.scss */
+  /* line 123, ../../../styles/utils/_utils.scss */
   .d-up.d-up.hidden {
     display: none;
     visibility: hidden;
@@ -2548,29 +2589,29 @@ ul.bullets {
 }
 /* Visibility - @end */
 /* Positions - @begin */
-/* line 116, ../../../styles/utils/_utils.scss */
+/* line 133, ../../../styles/utils/_utils.scss */
 .static {
   position: static;
 }
 
-/* line 119, ../../../styles/utils/_utils.scss */
+/* line 136, ../../../styles/utils/_utils.scss */
 .relative {
   position: relative;
 }
 
-/* line 122, ../../../styles/utils/_utils.scss */
+/* line 139, ../../../styles/utils/_utils.scss */
 .absolute {
   position: absolute;
 }
 
-/* line 125, ../../../styles/utils/_utils.scss */
+/* line 142, ../../../styles/utils/_utils.scss */
 .fixed {
   position: fixed;
 }
 
 /* Positions - @end */
 /* Centering - @begin */
-/* line 131, ../../../styles/utils/_utils.scss */
+/* line 148, ../../../styles/utils/_utils.scss */
 .center {
   position: relative;
   left: 50%;
@@ -2581,7 +2622,7 @@ ul.bullets {
   transform: translateX(-50%);
 }
 
-/* line 134, ../../../styles/utils/_utils.scss */
+/* line 151, ../../../styles/utils/_utils.scss */
 .middle {
   position: relative;
   top: 50%;
@@ -2592,7 +2633,7 @@ ul.bullets {
   transform: translateY(-50%);
 }
 
-/* line 137, ../../../styles/utils/_utils.scss */
+/* line 154, ../../../styles/utils/_utils.scss */
 .centered {
   position: relative;
   left: 50%;
@@ -2604,7 +2645,7 @@ ul.bullets {
   transform: translateX(-50%) translateY(-50%);
 }
 
-/* line 140, ../../../styles/utils/_utils.scss */
+/* line 157, ../../../styles/utils/_utils.scss */
 .absolute-center {
   position: absolute;
   left: 50%;
@@ -2615,7 +2656,7 @@ ul.bullets {
   transform: translateX(-50%);
 }
 
-/* line 143, ../../../styles/utils/_utils.scss */
+/* line 160, ../../../styles/utils/_utils.scss */
 .absolute-middle {
   position: absolute;
   top: 50%;
@@ -2626,7 +2667,7 @@ ul.bullets {
   transform: translateY(-50%);
 }
 
-/* line 146, ../../../styles/utils/_utils.scss */
+/* line 163, ../../../styles/utils/_utils.scss */
 .absolute-centered {
   position: absolute;
   left: 50%;
@@ -2640,63 +2681,63 @@ ul.bullets {
 
 /* Centering - @end */
 /* Sizing - @begin */
-/* line 152, ../../../styles/utils/_utils.scss */
+/* line 169, ../../../styles/utils/_utils.scss */
 .full {
   width: 100%;
 }
 
-/* line 155, ../../../styles/utils/_utils.scss */
+/* line 172, ../../../styles/utils/_utils.scss */
 .half {
   width: 50%;
 }
 
-/* line 158, ../../../styles/utils/_utils.scss */
+/* line 175, ../../../styles/utils/_utils.scss */
 .one-third {
   width: 33.33%;
 }
-/* line 160, ../../../styles/utils/_utils.scss */
+/* line 177, ../../../styles/utils/_utils.scss */
 .one-third:first-child, .one-third + .two-third, .two-third + .one-third {
   width: 33.34%;
 }
 
-/* line 166, ../../../styles/utils/_utils.scss */
+/* line 183, ../../../styles/utils/_utils.scss */
 .two-third {
   width: 66.66%;
 }
 
-/* line 169, ../../../styles/utils/_utils.scss */
+/* line 186, ../../../styles/utils/_utils.scss */
 .one-fourth {
   width: 25%;
 }
 
-/* line 172, ../../../styles/utils/_utils.scss */
+/* line 189, ../../../styles/utils/_utils.scss */
 .three-fourth {
   width: 75%;
 }
 
-/* line 175, ../../../styles/utils/_utils.scss */
+/* line 192, ../../../styles/utils/_utils.scss */
 .one-fifth {
   width: 20%;
 }
 
-/* line 178, ../../../styles/utils/_utils.scss */
+/* line 195, ../../../styles/utils/_utils.scss */
 .two-fifth {
   width: 40%;
 }
 
-/* line 181, ../../../styles/utils/_utils.scss */
+/* line 198, ../../../styles/utils/_utils.scss */
 .three-fifth {
   width: 60%;
 }
 
-/* line 184, ../../../styles/utils/_utils.scss */
+/* line 201, ../../../styles/utils/_utils.scss */
 .four-fifth {
   width: 80%;
 }
 
 /* Sizing - @end */
 /* Ratios - @begin */
-/* line 190, ../../../styles/utils/_utils.scss */
+/* line 207, ../../../styles/utils/_utils.scss */
 .ratio {
   position: relative;
   display: inline-block;
@@ -2755,34 +2796,29 @@ ul.bullets {
   padding-top: 62.5% ;
 }
 
-/* line 37, ../../../styles/utils/mixins/_ratios.scss */
-.ratio-1x2:before {
-  padding-top: 200% ;
-}
-
 /* Ratios - @end */
 /* Debug - @begin */
-/* line 203, ../../../styles/utils/_utils.scss */
+/* line 220, ../../../styles/utils/_utils.scss */
 .debug {
   border: 1px dashed red;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 208, ../../../styles/utils/_utils.scss */
+/* line 225, ../../../styles/utils/_utils.scss */
 .debug .debug {
   border-color: blue;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 212, ../../../styles/utils/_utils.scss */
+/* line 229, ../../../styles/utils/_utils.scss */
 .debug .debug .debug {
   border-color: green;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 216, ../../../styles/utils/_utils.scss */
+/* line 233, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug {
   border-color: orange;
   background-color: rgba(0, 0, 0, 0.1);
 }
-/* line 220, ../../../styles/utils/_utils.scss */
+/* line 237, ../../../styles/utils/_utils.scss */
 .debug .debug .debug .debug .debug {
   border-color: pink;
   background-color: rgba(0, 0, 0, 0.1);
