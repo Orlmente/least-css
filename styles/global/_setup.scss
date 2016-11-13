@@ -75,7 +75,7 @@ h6 {
 // 1st level lists won't have bullets/number
 // by design only nested lists will.
 // To add bullets/numbers for 1st level lists
-// there's a .bulltes class in pages/base scss
+// there's a .bulletes class in pages/base scss
 
 ol {
     list-style: inside decimal;
@@ -93,8 +93,8 @@ ol ol,
 ul ul,
 ol ul,
 ul ol {
-    margin-left: $pad*3;
-    font-size: 90%;
+    margin-left: 2em;
+    font-size: 95%;
 }
 ol ol,
 ul ol {
@@ -117,7 +117,8 @@ button {
 // Texts hyphenation
 p,
 span,
-blockquote {
+blockquote,
+q {
     // limit the scope for these rules like I did for inputs
     // if you notice something weird in text renderings
 
@@ -136,10 +137,16 @@ blockquote {
              hyphenate-lines: 3;
 }
 
+p + p {
+    margin-top: 1em;
+}
+
 // Images
 img {
     max-width: 100%;
     height: auto;
 }
+
+@import "setup-extend";
 
 /* Setup - @end */
