@@ -46,8 +46,9 @@
 }
 
 // put all icons in this list
+// test icons to be replaced with needed ones
 $icons: (
-    star: "\f005"
+    test: "\f2b4",
 );
 
 @each $name, $gliph in $icons {
