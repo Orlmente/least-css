@@ -2354,6 +2354,11 @@ blockquote, q {
   margin: 1em 1.5em;
 }
 
+/* line 24, ../../../styles/global/_setup-extend.scss */
+label {
+  cursor: pointer;
+}
+
 /* Setup - @end */
 /* Forms - @begin */
 /* Forms - @end */
