@@ -53,7 +53,7 @@ tmtags
 *.sublime-workspace
 *.sublime-project
 .eprj
-sublime-gulp.cache
+.sublime-gulp.cache
 
 # Sass
 ############################
