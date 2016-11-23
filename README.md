@@ -364,7 +364,7 @@ Typical output of that cmd is:
 
 ## 5) LEGALS
 
-Licensed under MIT & WTFPL
+Licensed under MIT & WTFPL2
 
 ---
 
