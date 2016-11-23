@@ -14,7 +14,6 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 
@@ -23,6 +22,7 @@ body {
     font-size: $base-font-size;
 
     &:not(input) {
+        /* autoprefixer: off */
         // enabling fancy ligatures when available
         -webkit-font-feature-settings: "liga", "dlig";
            -moz-font-feature-settings: "liga=1, dlig=1";
@@ -119,6 +119,7 @@ p,
 span,
 blockquote,
 q {
+    /* autoprefixer: off */
     // limit the scope for these rules like I did for inputs
     // if you notice something weird in text renderings
 
