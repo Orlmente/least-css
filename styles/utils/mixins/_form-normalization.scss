@@ -23,16 +23,20 @@
     @include appearance($importance, none);
 }
 
-@mixin no-box-shadow ($importance) {
+@mixin no-box-shadow ($importance: '') {
     box-shadow: none unquote($importance);
 }
 
-@mixin no-radius ($importance) {
+@mixin no-radius ($importance: '') {
     border-radius: 0 unquote($importance);
 }
 
-@mixin no-outline ($importance) {
+@mixin no-outline ($importance: '') {
     outline: 0 none unquote($importance);
+}
+
+@mixin no-resize ($importance: '') {
+    resize: none unquote($importance);
 }
 
 @mixin no-autofill($importance: '', $bg: #fff, $fg: #000) {
