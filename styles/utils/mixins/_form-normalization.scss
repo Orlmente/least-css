@@ -32,7 +32,8 @@
 }
 
 @mixin no-outline ($importance: '') {
-    outline: 0 none unquote($importance);
+    outline-color: transparent unquote($importance);
+    outline-style: none unquote($importance);
 }
 
 @mixin no-resize ($importance: '') {
