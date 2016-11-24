@@ -30,3 +30,7 @@ label {
 textarea {
     @include no-resize();
 }
+
+:focus {
+    @include no-outline();
+}
