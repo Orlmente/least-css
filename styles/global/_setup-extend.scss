@@ -35,7 +35,13 @@ pre {
     margin: 1em 1.5em;
 }
 
-label {
+label,
+button,
+input[type="button"],
+input[type="image"],
+input[type="file"],
+input[type="reset"],
+input[type="submit"] {
     cursor: pointer;
 }
 
