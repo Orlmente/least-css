@@ -117,49 +117,39 @@ $cols-14: 14 1, 14 3, 14 5, 14 9, 14 11, 14 13;
 $cols-16: 16 1, 16 3, 16 5, 16 7, 16 9, 16 10, 16 11, 16 13, 16 15;
 
 // mobile
-$cols-m: join($cols-1-4, $cols-5);
-$cols-m: join($cols-m, $cols-6);
+$cols-1to6: join( join( $cols-1-4, $cols-5 ), $cols-6 );
 
 // phablet
-$cols-p: join($cols-1-4, $cols-5);
-$cols-p: join($cols-p, $cols-6);
-$cols-p: join($cols-p, $cols-7);
-$cols-p: join($cols-p, $cols-8);
+$cols-7to8: join( $cols-7, $cols-8 );
 
 // tablet
-$cols-t: join($cols-1-4, $cols-5);
-$cols-t: join($cols-t, $cols-5);
-$cols-t: join($cols-t, $cols-6);
-$cols-t: join($cols-t, $cols-7);
-$cols-t: join($cols-t, $cols-8);
-$cols-t: join($cols-t, $cols-9-11);
-$cols-t: join($cols-t, $cols-12);
+$cols-9to12: join( $cols-9-11, $cols-12);
 
 // desktop
-$cols-d: join($cols-1-4, $cols-5);
-$cols-d: join($cols-d, $cols-6);
-$cols-d: join($cols-d, $cols-7);
-$cols-d: join($cols-d, $cols-8);
-$cols-d: join($cols-d, $cols-9-11);
-$cols-d: join($cols-d, $cols-12);
-// $cols-d: join($cols-d, $cols-14);
-// $cols-d: join($cols-d, $cols-16);
+$cols-14to16: join( $cols-14, $cols-16 );
 
 // grids
+// grid system uses internal mediaqueries for flexibility
 $grids: (
     'm': 'all' (
-        $cols-m
+        $cols-1to6
     ),
     'p': '(min-width: 415px) and (max-width: 767px)' (
-        $cols-p
+        join( $cols-1to6, $cols-7to8 )
     ),
     't': '(min-width: 768px) and (max-width: 1040px)' (
-        $cols-t
+        join( join( $cols-1to6, $cols-7to8 ), $cols-9to12 )
     ),
     'd': '(min-width: 1041px)' (
-        $cols-d
+        join( join( $cols-1to6, $cols-7to8 ), $cols-9to12 )
+        // if more than 12 columns are needed join $cols-d too
+        // join( join( join( $cols-1to6, $cols-7to8 ), $cols-9to12 ), $cols-14to16 )
     )
 );
+
+// push and pull classes defaults to false, set to true to enable them
+$push: false;
+$pull: false;
 
 @each $name, $columns in $grids {
     $media: nth( $columns, 1 );
@@ -177,12 +167,18 @@ $grids: (
                     // @include grid-col;
                     width: percentage($partial / $total);
                 }
-                .#{$name}-push-#{$partial}of#{$total}.#{$name}-push-#{$partial}of#{$total} {
-                    margin-left: percentage($partial / $total);
+                
+                // push & pull classes
+                @if ( $push == true ) {
+                    .#{$name}-push-#{$partial}of#{$total}.#{$name}-push-#{$partial}of#{$total} {
+                        margin-left: percentage($partial / $total);
+                    }
                 }
-                .#{$name}-pull-#{$partial}of#{$total}.#{$name}-pull-#{$partial}of#{$total} {
-                    margin-left: auto;
-                    margin-right: percentage($partial / $total);
+                @if ( $pull == true ) {
+                    .#{$name}-pull-#{$partial}of#{$total}.#{$name}-pull-#{$partial}of#{$total} {
+                        margin-left: auto;
+                        margin-right: percentage($partial / $total);
+                    }
                 }
             }
         }
