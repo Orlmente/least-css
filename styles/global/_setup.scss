@@ -18,6 +18,7 @@ html {
 
 // reset backface visibility for table due to rendering bug in webkit
 *:not(table):not(thead):not(tbody):not(tfoot):not(tr):not(td):not(th) {
+    // render performances improvement
     backface-visibility: hidden;
 }
 
@@ -124,8 +125,7 @@ span,
 blockquote,
 q {
     /* autoprefixer: off */
-    // limit the scope for these rules like I did for inputs
-    // if you notice something weird in text renderings
+    // scope is limited to specific tags to prevent possible side-effects
 
     -ms-word-wrap: break-word;
         word-wrap: break-word;
