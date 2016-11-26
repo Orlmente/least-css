@@ -17,6 +17,18 @@ ul {
     }
 }
 
+// Bullets enforcings
+ol {
+    &.bullets {
+        list-style: inside decimal;
+    }
+}
+ul {
+    &.bullets {
+        list-style: inside disc;
+    }
+}
+
 blockquote,
 q,
 pre {
