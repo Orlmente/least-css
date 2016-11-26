@@ -10,12 +10,11 @@ $mono  : $monospace;
 $icon  : 'FontAwesome';
 
 // font sizes
-// NOTE:
-// html has font-size: 62.5% so 1rem = 10px
+// NOTE: <html> has font-size: 62.5% so 1rem = 10px
 $base-font-size   : 1.6rem;
 $small-font-size  : 1.4rem;
 
-// font modifiers
+// font-weight modifiers
 $thin  : 100;
 $light : 300;
 $roman : 400;
@@ -25,9 +24,24 @@ $bold  : 700;
 $extra : 800;
 
 // sizes
-$pad-module  : 1rem;
-$pad         : $pad-module;
+$pad         : 1rem;
 $icon-height : $base-font-size;
 $icon-width  : $base-font-size;
 
+// breakpoints
+$phablet-up  : '( min-width: 26em )'; // 480px
+$tablet-up   : '( min-width: 48em )'; // 768px
+$tablet-down : '( max-width: 65em )'; // 1040px
+$desktop-up  : '( min-width: 65em )'; // 1040px
+$big-up      : '( min-width: 81em )'; // 1280px
+$huge-up     : '( min-width: 90em )'; // 1440px
+
+// mediaquery limits
+$not-small : '#{$phablet-up}';
+$medium    : '#{$phablet-up} and #{$tablet-down}';
+$desktop   : '#{$desktop-up}';
+$large     : '#{$big-up}';
+$huge      : '#{$huge-up}';
+
 // images / icons
+// put here variables with base64 encoded images/svgs/etc...
