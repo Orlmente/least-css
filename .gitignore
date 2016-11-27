@@ -53,6 +53,7 @@ tmtags
 *.sublime-workspace
 *.sublime-project
 .eprj
+.sublime-gulp.cache
 
 # Sass
 ############################
@@ -61,3 +62,4 @@ tmtags
 # Project specific ignores
 ############################
 _assets
+node_modules

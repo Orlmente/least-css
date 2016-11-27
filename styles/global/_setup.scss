@@ -14,7 +14,11 @@ html {
 *:before,
 *:after {
     box-sizing: inherit;
-    -webkit-backface-visibility: hidden;
+}
+
+// reset backface visibility for table due to rendering bug in webkit
+*:not(table):not(thead):not(tbody):not(tfoot):not(tr):not(td):not(th) {
+    // render performances improvement
     backface-visibility: hidden;
 }
 
@@ -23,6 +27,7 @@ body {
     font-size: $base-font-size;
 
     &:not(input) {
+        /* autoprefixer: off */
         // enabling fancy ligatures when available
         -webkit-font-feature-settings: "liga", "dlig";
            -moz-font-feature-settings: "liga=1, dlig=1";
@@ -72,10 +77,10 @@ h6 {
 // Lists
 // 
 // NOTE:
-// 1st level lists won't have bullets/number
+// 1st level lists won't have bullets/numbers,
 // by design only nested lists will.
 // To add bullets/numbers for 1st level lists
-// there's a .bulletes class in pages/base scss
+// you can find .bullets class in setup extender scss
 
 ol {
     list-style: inside decimal;
@@ -119,8 +124,8 @@ p,
 span,
 blockquote,
 q {
-    // limit the scope for these rules like I did for inputs
-    // if you notice something weird in text renderings
+    /* autoprefixer: off */
+    // scope is limited to specific tags to prevent possible side-effects
 
     -ms-word-wrap: break-word;
         word-wrap: break-word;
@@ -142,11 +147,49 @@ p + p {
 }
 
 // Images
-img {
+img,
+picture {
     max-width: 100%;
     height: auto;
 }
 
-@import "setup-extend";
+// Tables
+
+table {
+    table-layout: fixed;
+    margin: 0;
+}
+
+caption {
+    padding: 0 1em 1em;
+}
+
+thead {}
+tbody {}
+tfoot {}
+
+tr,
+th,
+td {
+    vertical-align: middle;
+}
+
+tr {}
+
+th,
+td {
+    padding: 0.5em 1em;
+    text-align: left;
+}
+
+th {
+    border-bottom: 1px solid $black;
+}
+
+td {
+    border-top: 1px solid lighten($black, 75%);
+}
+
+@import "setup-extender";
 
 /* Setup - @end */

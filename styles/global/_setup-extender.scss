@@ -1,0 +1,54 @@
+// Setup extend (fine tuning)
+
+// Nested Lists 3rd level down
+ol {
+    & & &,
+    ul & &,
+    ul ul &, {
+        list-style-type: lower-alpha;
+    }
+}
+
+ul {
+    & & &,
+    ol & &,
+    ol ol & {
+        list-style-type: circle;
+    }
+}
+
+// Bullets enforcings
+ol {
+    &.bullets {
+        list-style: inside decimal;
+    }
+}
+ul {
+    &.bullets {
+        list-style: inside disc;
+    }
+}
+
+blockquote,
+q,
+pre {
+    margin: 1em 1.5em;
+}
+
+label,
+button,
+input[type="button"],
+input[type="image"],
+input[type="file"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+textarea {
+    @include no-resize();
+}
+
+:focus {
+    @include no-outline();
+}

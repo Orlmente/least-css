@@ -1,0 +1,21 @@
+{
+  "name": "css-scaffold-and-hints",
+  "version": "1.0.0",
+  "description": "css scaffold and hints",
+  "main": "README.md",
+  "keywords": ["css","scaffold","scss","best pratice"],
+  "repository": "https://github.com/Orlmente/css-scaffold-and-hints.git",
+  "scripts": {
+    "prestart": "npm install",
+    "watch": "gulp watcher",
+    "style": "gulp styles",
+  },
+  "author": "Daniele O'rlmente Messa <0rlm3nt3@gmail.com>",
+  "license": "(MIT OR WTFPL2)",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.1"
+  }
+}

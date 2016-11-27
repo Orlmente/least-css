@@ -46,7 +46,7 @@
 .d-up.d-up {
     display: none;
 }
-@media ( max-width: 767px ) {
+@media #{$phablet-down} {
     .p-down.p-down {
         display: block;
 
@@ -62,7 +62,7 @@
         }
     }
 }
-@media ( min-width: 768px ) {
+@media #{$tablet-up} {
     .t-up.t-up {
         display: block;
 
@@ -78,7 +78,7 @@
         }
     }
 }
-@media ( max-width: 1040px ) {
+@media  #{$tablet-down} {
     .t-down.t-down {
         display: block;
 
@@ -94,7 +94,7 @@
         }
     }
 }
-@media ( min-width: 768px ) and ( max-width: 1040px ) {
+@media #{$tablet} {
     .t-only.t-only {
         display: block;
 
@@ -110,7 +110,7 @@
         }
     }
 }
-@media ( min-width: 1041px ) {
+@media #{$desktop} {
     .d-up.d-up {
         display: block;
 

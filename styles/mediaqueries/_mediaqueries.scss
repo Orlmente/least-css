@@ -18,49 +18,31 @@
 
 // Viewports
 
-// iphone lt 6 ( 320px down )
-@media screen and ( max-width: 320px ) {
-    @import "viewports/320";
+// phablets
+@media screen and #{$not-small} {
+    // empty by default
+    @import "viewports/480up";
 }
 
-// generic mobile portrait ( 360px down )
-@media screen and ( max-width: 360px ) {
-    @import "viewports/360";
+// tablets
+@media screen and #{$medium} {
+    // empty by default
+    @import "viewports/768-1040";
 }
 
-// generic phablet (targets iphone6+ too)
-@media screen and ( max-width: 767px ) {
-    @import "viewports/767down";
-}
-
-// ipad portrait
-@media screen and ( max-width: 768px ) and ( orientation: portrait ) {
-    @import "viewports/768";
-}
-
-// generic smaller tablets and mobiles ( 960px down )
-@media screen and ( max-width: 960px ) {
-    @import "viewports/960down";
-    // @import "viewports/800";
-}
-
-// ipad landscape
-@media screen and ( max-width: 1040px ) {
-    @import "viewports/1024down";
-}
-
-// desktop ( 1024px up )
-@media screen and ( min-width: 1041px ) {
+// desktop
+@media screen and #{$desktop} {
     @import "viewports/1040up";
 }
 
 // big screen ( 1280px up )
-@media screen and ( min-width: 1296px ) {
+@media screen and #{$large} {
     @import "viewports/1280up";
 }
 
-// bigger screen ( 1400px up )
-@media screen and ( min-width: 1400px ) {
+// bigger screen ( 1440px up )
+@media screen and #{$huge} {
+    // empty by default
     @import "viewports/1400up";
 }
 

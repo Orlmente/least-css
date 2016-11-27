@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Test style</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/style.css">
     <style>
         /* Demo style */
@@ -13,15 +14,82 @@
         fieldset + fieldset,
         div + fieldset,
         fieldset + div {
-            margin-top: 10px;
+            margin-top: 1.5rem;
+        }
+        /*
+            a: #a64742;
+            b: #0a1626;
+            c: #363c4c;
+            d: #546681;
+            e: #e3e7ea;
+            f: #f4f7fa;
+            h: #1e1e1e;
+            g: #fff;
+        */
+        .demo-heading,
+        .demo-footer,
+        .demo-tags-section-heading,
+        .demo-tags-block-heading,
+        .demo-tags-block-description {
+            font-family: 'Lato', sans-serif;
+        }
+        .demo-tags-section-heading,
+        .demo-tags-block-heading,
+        .demo-tags-block-description {
+            padding: 0 2rem;
+        }
+        .demo-tags-section-heading {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            color: #a64742;
+            background-color: #e3e7ea;
+        }
+        .demo-tags-block-heading {
+            color: #363c4c;
+        }
+        .demo-tags-block-description {
+            margin: 0 auto 1rem;
+            font-weight: 400;
+            color: #1e1e1e;
+        }
+        .demo-tags-block-description strong {
+            font-weight: 700;
+        }
+        .demo-tags-block {
+            margin: 0 auto 2rem;
+            padding: 1.5rem 3rem;
+        }
+        .demo-heading {
+            height: 8rem;
+            padding: 2rem;
+            color: #e3e7ea;
+            background-color: #a64742;
+        }
+        .demo-tags-block-separator {
+            margin: 1.5rem;
+            border-color: #e3e7ea;
+        }
+        .demo-body {
+            background-color: #f4f7fa;
+        }
+        .demo-footer {
+            min-height: 24rem;
+            padding: 2rem;
+            color: #0a1626;
+            background-color: #546681;
+        }
+        .demo-wrapper {
+            background-color: #fff;
+            padding: 1rem 0;
         }
     </style>
 </head>
-<body class="cf">
-    <div><small>v.1.0</small></div>
-    <br/><br/>
+<body class="demo-body cf">
+    <div class="demo-heading"><small>v.0.1 alpha</small></div>
     <div class="demo-wrapper wrap cf">
-        <h3 class="demo-tags-block-heading">Headings</h3>
+        <p class="demo-tags-block-description">Scaffold intro here...</p>
+        <h2 class="demo-tags-section-heading">Commons (tags)</h2>
+        <h4 class="demo-tags-block-heading">Headings</h4>
         <div class="demo-tags-block">
             <h1>Heading 1</h1>
             <h2>Heading 2</h2>
@@ -30,7 +98,7 @@
             <h5>Heading 5</h5>
             <h6>Heading 6</h6>
         </div>
-        <hr>
+        <hr class="demo-tags-block-separator">
         <h3 class="demo-tags-block-heading">Texts</h3>
         <div class="demo-tags-block">
             Normal text <sup>Sup text</sup><sub>Sub text</sub><br/><span>Span text</span><br/><strong>Strong text</strong><br/><em>Emphatize text</em><br/><u>Unerline Text</u><br/><abbr title="Abbreviation">Abbr.</abbr><br/><dfn title="Definition">Def.</dfn><br/><a href="#">Link text</a>
@@ -38,33 +106,17 @@
             <q>Short quote text</q>
             <pre>Preformatted text</pre>
         </div>
-        <hr>
+        <hr class="demo-tags-block-separator">
         <h3 class="demo-tags-block-heading">Paragraphs (adiacent p tags)</h3>
+        <p class="demo-tags-block-description">Adiacent <strong>&lt;p&gt;</strong> tags' vertical spacing applied with axyomatic style tecnique ( <strong>tag + tag { ... }</strong> )</p>
         <div class="demo-tags-block">
-            <p>First paragraph</p>
-            <p>Second paragraph</p>
-            <p>Second paragraph</p>
+            <p>First paragraph, lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore tempora laboriosam dolor tenetur hic, rem dolorum aperiam sequi at eos ullam praesentium fuga, eveniet unde dolores, earum non voluptatem. Aliquam.</p>
+            <p>Second paragraph, lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt temporibus ducimus asperiores et molestiae ut esse, quasi reprehenderit minus quaerat voluptatibus labore necessitatibus vel dolore. Amet vitae hic deserunt, nam!</p>
+            <p>Second paragraph, lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia dolor eligendi veritatis consequuntur, repellendus ipsa ad sapiente quod, laudantium laborum et, similique commodi molestias repellat. Neque iste assumenda atque enim.</p>
         </div>
-        <hr>
-        <h3 class="demo-tags-block-heading">Icons (glyphs from FontAwesome)</h3>
-        <div class="demo-tags-block">
-            <ul>
-                <li>
-                    <h5>Icon only</h5>
-                    <span class="icon icon-test"><span class="icon-label">Font Awesome Icon</span></span>
-                </li>
-                <li>
-                    <h5>Icon before label</h5>
-                    <span class="icon icon-before icon-test"><span class="icon-label">Font Awesome Icon</span></span>
-                </li>
-                <li>
-                    <h5>Icon after label</h5>
-                    <span class="icon icon-after icon-test"><span class="icon-label">Font Awesome Icon</span></span>
-                </li>
-            </ul>
-        </div>
-        <hr>
+        <hr class="demo-tags-block-separator">
         <h3 class="demo-tags-block-heading">Lists</h3>
+        <p class="demo-tags-block-description">First level lists have no bullets/numbers or padding. Second level depth lists will show bullets/numbers normally.<br/>To show bullets/numbers in first level lists use <strong>.bullets</strong> class (found in setup extender scss)</p>
         <div class="demo-tags-block">
             <h5>Unordered list (default)</h5>
             <ul>
@@ -135,41 +187,14 @@
                 <li>Ordered list item 3</li>
             </ol>
         </div>
-        <hr>
-        <h3 class="demo-tags-block-heading">Form elements <small>(not yet implemented)</small></h3>
+        <hr class="demo-tags-block-separator">
+        <h3 class="demo-tags-block-heading">Form elements</h3>
+        <p class="demo-tags-block-description">Forms description...</p>
         <div class="demo-tags-block cf">
             <form action="#">
                 <fieldset>
                     <input type="text" name="text" id="text">
                     <label for="text">Input:text</label>
-                </fieldset>
-                <fieldset>
-                    <select name="select" id="select">
-                        <option value="">Option default</option>
-                        <option value="1">Option 01</option>
-                        <option value="2">Option 02</option>
-                        <option value="3">Option 03</option>
-                    </select>
-                </fieldset>
-                <fieldset>
-                    <div class="cf">
-                        <input type="checkbox" name="check" id="check-1">
-                        <label for="check-1">Checkbox 1</label>
-                    </div>
-                    <div class="cf">
-                        <input type="checkbox" name="check" id="check-2">
-                        <label for="check-2">Checkbox 2</label>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <div class="cf">
-                        <input type="radio" name="radio" id="radio-1">
-                        <label for="radio-1">Radio 1</label>
-                    </div>
-                    <div class="cf">
-                        <input type="radio" name="radio" id="radio-2">
-                        <label for="radio-2">Radio 2</label>
-                    </div>
                 </fieldset>
                 <fieldset>
                     <input type="password" name="password" id="password">
@@ -180,6 +205,40 @@
                     <label for="email">Input:email (!ie9)</label>
                 </fieldset>
                 <fieldset>
+                    <select name="select" id="select">
+                        <option value="">Option default</option>
+                        <option value="1">Option 01</option>
+                        <option value="2">Option 02</option>
+                        <option value="3">Option 03</option>
+                        <optgroup label="Groupped Options">
+                            <option value="1.1">Option 1.1</option>
+                            <option value="1.2">Option 1.2</option>
+                            <option value="1.3">Option 1.3</option>
+                        </optgroup>
+                    </select>
+                    <label for="select">Select</label>
+                </fieldset>
+                <fieldset>
+                    <div class="cf">
+                        <input type="checkbox" name="check" id="check-1">
+                        <label for="check-1">Input:checkbox 1</label>
+                    </div>
+                    <div class="cf">
+                        <input type="checkbox" name="check" id="check-2">
+                        <label for="check-2">Input:checkbox 2</label>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="cf">
+                        <input type="radio" name="radio" id="radio-1">
+                        <label for="radio-1">Input:radio 1</label>
+                    </div>
+                    <div class="cf">
+                        <input type="radio" name="radio" id="radio-2">
+                        <label for="radio-2">Input:radio 2</label>
+                    </div>
+                </fieldset>
+                <fieldset>
                     <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                     <label for="textarea">Textarea</label>
                 </fieldset>
@@ -188,18 +247,18 @@
                     <label for="file">Input:file</label>
                 </fieldset>
                 <div>
-                    <button>Button</button>
-                    <input type="button" value="Input:button">
-                    <input type="image" src="#" alt="Input:image">
-                    <input type="reset" value="Input:reset">
+                    <button>Button</button><br/><br/>
+                    <input type="button" value="Input:button"><br/><br/>
+                    <input type="image" src="https://placekitten.com/150/50" alt="Input:image"><br/><br/>
+                    <input type="reset" value="Input:reset"><br/><br/>
                     <input type="submit" value="Input:submit">
                 </div>
             </form>
         </div>
-        <hr>
-        <h3 class="demo-tags-block-heading">Tables (not yet implemented)</h3>
+        <hr class="demo-tags-block-separator">
+        <h3 class="demo-tags-block-heading">Tables</h3>
         <div class="demo-tags-block">
-            <table class="half">
+            <table class="m-all d-1of2">
                 <caption>Table caption</caption>
                 <thead>
                     <tr>
@@ -229,8 +288,47 @@
                 </tbody>
             </table>
         </div>
-        <hr>
+        <h2 class="demo-tags-section-heading">Goodies (utils)</h2>
+        <h3 class="demo-tags-block-heading">Icons (glyphs from FontAwesome)</h3>
+        <p class="demo-tags-block-description">Icons description...</p>
+        <div class="demo-tags-block">
+            <ul>
+                <li>
+                    <h5>Icon only</h5>
+                    <span class="icon icon-test"><span class="icon-label">Font Awesome Icon</span></span>
+                </li>
+                <li>
+                    <h5>Icon before label</h5>
+                    <span class="icon icon-before icon-test"><span class="icon-label">Font Awesome Icon</span></span>
+                </li>
+                <li>
+                    <h5>Icon after label</h5>
+                    <span class="icon icon-after icon-test"><span class="icon-label">Font Awesome Icon</span></span>
+                </li>
+            </ul>
+        </div>
+        <hr class="demo-tags-block-separator">
+        <h3 class="demo-tags-block-heading">Debugger class</h3>
+        <div class="demo-tags-block">
+            <div class="debug">
+                First level
+                <div class="debug">
+                    Second level
+                    <div class="debug">
+                        Third level
+                        <div class="debug">
+                            Fourth level
+                            <div class="debug">
+                                Fifth level
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="demo-tags-block-separator">
         <h3 class="demo-tags-block-heading">Ratios</h3>
+        <p class="demo-tags-block-description">Ratio enforcers description...</p>
         <div class="demo-tags-block cf">
             <div class="ratio ratio-1x1 debug m-1of6 to-left cf">
                 <div class="ratio-content">ratio 1:1</div>
@@ -251,7 +349,7 @@
                 <div class="ratio-content">ratio 2:1</div>
             </div>
         </div>
-        <hr>
+        <hr class="demo-tags-block-separator">
         <h3 class="demo-tags-block-heading">Size aware contents (resize page to see changes)</h3>
         <div class="demo-tags-block">
             <h5>Phablet down (&lt;768px)</h5>
@@ -269,36 +367,30 @@
                 <p>This content is only visible for screen width above and equals 768px</p>
             </div>
             <br/>
-            <h5>Tablet only (&gt;=768px &amp; &lt;=1040px)</h5>
+            <h5>Tablet only (&gt;=768px &amp; &lt;1040px)</h5>
             <div class="t-only">
                 <p>This content is only visible for screen width above and equals 768px</p>
             </div>
             <br/>
-            <h5>Desktop up (&gt;1040px)</h5>
+            <h5>Desktop up (&gt;=1040px)</h5>
             <div class="d-up">
                 <p>This content is only visible for screen width above 1040px</p>
             </div>
         </div>
-        <hr>
-        <h3 class="demo-tags-block-heading">Debugger class</h3>
-        <div class="demo-tags-block">
-            <div class="debug">
-                First level
-                <div class="debug">
-                    Second level
-                    <div class="debug">
-                        Third level
-                        <div class="debug">
-                            Fourth level
-                            <div class="debug">
-                                Fifth level
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <hr class="demo-tags-block-separator">
+        <h3 class="demo-tags-block-heading">Grid system</h3>
+        <p class="demo-tags-block-description">Grid description...</p>
+        <div class="demo-tags-block">grid example in here...</div>
     </div>
-    <br/><br/>
+    <div class="demo-footer"></div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        /* globals window */
+        'use strict';
+
+        window.JSMain.render(['main']);
+    </script>
+    <!-- main script - end -->
 </body>
 </html>
