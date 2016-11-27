@@ -29,16 +29,18 @@ $icon-height : $base-font-size;
 $icon-width  : $base-font-size;
 
 // breakpoints
-$phablet-up  : '( min-width: 26em )'; // 480px
-$tablet-up   : '( min-width: 48em )'; // 768px
-$tablet-down : '( max-width: 65em )'; // 1040px
-$desktop-up  : '( min-width: 65em )'; // 1040px
-$big-up      : '( min-width: 81em )'; // 1280px
-$huge-up     : '( min-width: 90em )'; // 1440px
+$phablet-up   : '( min-width: 480px )'; // 480px
+$phablet-down : '( max-width: 767.9px )'; // 768px
+$tablet-up    : '( min-width: 768px )'; // 768px
+$tablet-down  : '( max-width: 1039.9px )'; // 1040px
+$desktop-up   : '( min-width: 1040px )'; // 1040px
+$big-up       : '( min-width: 1280px )'; // 1280px
+$huge-up      : '( min-width: 1440px )'; // 1440px
 
 // mediaquery limits
 $not-small : '#{$phablet-up}';
 $medium    : '#{$phablet-up} and #{$tablet-down}';
+$tablet    : '#{$tablet-up} and #{$tablet-down}';
 $desktop   : '#{$desktop-up}';
 $large     : '#{$big-up}';
 $huge      : '#{$huge-up}';
