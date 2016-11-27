@@ -77,10 +77,10 @@ h6 {
 // Lists
 // 
 // NOTE:
-// 1st level lists won't have bullets/number
+// 1st level lists won't have bullets/numbers,
 // by design only nested lists will.
 // To add bullets/numbers for 1st level lists
-// there's a .bulletes class in pages/base scss
+// you can find .bullets class in setup extender scss
 
 ol {
     list-style: inside decimal;
@@ -187,9 +187,9 @@ th {
 }
 
 td {
-    border-bottom: 1px solid lighten($black, 75%);
+    border-top: 1px solid lighten($black, 75%);
 }
 
-@import "setup-extend";
+@import "setup-extender";
 
 /* Setup - @end */
